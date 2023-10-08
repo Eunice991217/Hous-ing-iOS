@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4865E8F22AD2BA6C00BAB81A /* mapDetailCont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4865E8F12AD2BA6C00BAB81A /* mapDetailCont.swift */; };
 		48876C742AD2816C007EDAF5 /* realEstate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48876C732AD2816C007EDAF5 /* realEstate.storyboard */; };
 		48876C782AD28CE9007EDAF5 /* mapCont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48876C772AD28CE9007EDAF5 /* mapCont.swift */; };
 		8B2ADE852AD25ADC00213F84 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2ADE7C2AD25ADC00213F84 /* Pretendard-Regular.otf */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		41CB422A137929E06455FA28 /* Pods-Hows-ing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hows-ing.debug.xcconfig"; path = "Target Support Files/Pods-Hows-ing/Pods-Hows-ing.debug.xcconfig"; sourceTree = "<group>"; };
+		4865E8F12AD2BA6C00BAB81A /* mapDetailCont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapDetailCont.swift; sourceTree = "<group>"; };
 		48876C732AD2816C007EDAF5 /* realEstate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = realEstate.storyboard; sourceTree = "<group>"; };
 		48876C772AD28CE9007EDAF5 /* mapCont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapCont.swift; sourceTree = "<group>"; };
 		48876C792AD29792007EDAF5 /* Hows-ing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hows-ing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				48876C772AD28CE9007EDAF5 /* mapCont.swift */,
+				4865E8F12AD2BA6C00BAB81A /* mapDetailCont.swift */,
 			);
 			path = realEstate;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				8BAA99142AD1551A00EF4746 /* AppDelegate.swift in Sources */,
 				48876C782AD28CE9007EDAF5 /* mapCont.swift in Sources */,
 				8BAA99162AD1551A00EF4746 /* SceneDelegate.swift in Sources */,
+				4865E8F22AD2BA6C00BAB81A /* mapDetailCont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
