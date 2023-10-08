@@ -14,6 +14,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var HomeIcon: UIImageView!
     @IBOutlet weak var PaperText: UILabel!
     @IBOutlet weak var HomeText: UILabel!
+    @IBOutlet weak var Button1View: UIView!
+    @IBOutlet weak var Button2View: UIView!
+    @IBOutlet weak var Button1Title: UILabel!
+    @IBOutlet weak var Button2Title: UILabel!
     let pageLock = NSLock()
     var bannerData:[BannerData] = []
     var tapNum: Int = 0
@@ -21,20 +25,38 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Init()
+        UIInit()
+        makeDummyData()
         Banner.delegate = self
         Banner.dataSource = self
     }
     
-    func Init(){
+    func UIInit(){
         Banner.layer.cornerRadius = 10
+        
         TabbarView.layer.cornerRadius = 40
         TabbarView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         TabbarView.layer.shadowOffset = CGSize(width: 0, height: 4)
         TabbarView.layer.shadowColor = UIColor.black.cgColor
         TabbarView.layer.shadowOpacity = 0.2
         TabbarView.layer.shadowRadius = 24 / UIScreen.main.scale
-        makeDummyData()
+        
+        Button1View.layer.cornerRadius = 20
+        Button1View.layer.shadowOffset = CGSize(width: 0, height: 4)
+        Button1View.layer.shadowColor = UIColor(named: "Shadow1")?.cgColor
+        Button1View.layer.shadowOpacity = 0.25
+        Button1View.layer.shadowRadius = 15 / UIScreen.main.scale
+        
+        Button2View.layer.cornerRadius = 20
+        Button2View.layer.shadowOffset = CGSize(width: 0, height: 4)
+        Button2View.layer.shadowColor = UIColor(named: "Shadow1")?.cgColor
+        Button2View.layer.shadowOpacity = 0.25
+        Button2View.layer.shadowRadius = 15 / UIScreen.main.scale
+        
+        Button1Title.text = "지역별\n청약 정보"
+        
+        Button2Title.text = "나에게 딱 맞는\n청약은?"
+     
     }
     
     func makeDummyData(){
