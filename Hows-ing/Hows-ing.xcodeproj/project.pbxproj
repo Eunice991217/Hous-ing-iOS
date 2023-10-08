@@ -22,6 +22,7 @@
 		8BAA991B2AD1551A00EF4746 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BAA99192AD1551A00EF4746 /* Main.storyboard */; };
 		8BAA991D2AD1551B00EF4746 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BAA991C2AD1551B00EF4746 /* Assets.xcassets */; };
 		8BAA99202AD1551B00EF4746 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BAA991E2AD1551B00EF4746 /* LaunchScreen.storyboard */; };
+		8BDFD2172AD283F70028A43E /* neurimboGothic-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8BDFD2162AD283F70028A43E /* neurimboGothic-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		8BAA991C2AD1551B00EF4746 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BAA991F2AD1551B00EF4746 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BAA99212AD1551B00EF4746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BDFD2162AD283F70028A43E /* neurimboGothic-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "neurimboGothic-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				8B2ADE7C2AD25ADC00213F84 /* Pretendard-Regular.otf */,
 				8B2ADE832AD25ADC00213F84 /* Pretendard-SemiBold.otf */,
 				8B2ADE7D2AD25ADC00213F84 /* Pretendard-Thin.otf */,
+				8BDFD2162AD283F70028A43E /* neurimboGothic-Regular.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			files = (
 				8B2ADE8C2AD25ADC00213F84 /* Pretendard-SemiBold.otf in Resources */,
 				8B2ADE882AD25ADC00213F84 /* Pretendard-Medium.otf in Resources */,
+				8BDFD2172AD283F70028A43E /* neurimboGothic-Regular.otf in Resources */,
 				8B2ADE892AD25ADC00213F84 /* Pretendard-Light.otf in Resources */,
 				8B2ADE8B2AD25ADC00213F84 /* Pretendard-ExtraBold.otf in Resources */,
 				8BAA99202AD1551B00EF4746 /* LaunchScreen.storyboard in Resources */,
