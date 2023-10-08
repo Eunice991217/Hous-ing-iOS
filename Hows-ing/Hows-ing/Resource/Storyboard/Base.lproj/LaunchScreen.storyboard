@@ -43,7 +43,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="Blue"/>
+                        <color key="backgroundColor" name="HousingBlue"/>
                         <constraints>
                             <constraint firstItem="wLZ-0l-AIt" firstAttribute="top" secondItem="ADR-Yr-3ap" secondAttribute="bottom" constant="51" id="1B9-vH-fpI"/>
                             <constraint firstItem="wLZ-0l-AIt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2d6-hq-oDI"/>
@@ -61,7 +61,7 @@
     </scenes>
     <resources>
         <image name="Logo" width="170.66667175292969" height="170.66667175292969"/>
-        <namedColor name="Blue">
+        <namedColor name="HousingBlue">
             <color red="0.24705882352941178" green="0.50980392156862742" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
