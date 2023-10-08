@@ -7,11 +7,15 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="Pretendard-Bold.otf">
             <string>Pretendard-Bold</string>
+        </array>
+        <array key="Pretendard-SemiBold.otf">
+            <string>Pretendard-SemiBold</string>
         </array>
     </customFonts>
     <scenes>
@@ -32,19 +36,72 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aFh-1L-1Jz">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aFh-1L-1Jz">
                                 <rect key="frame" x="37" y="137" width="319" height="114"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="114" id="LJr-QQ-xos"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XBA-Rh-2TW">
-                                    <size key="itemSize" width="128" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="XBA-Rh-2TW">
+                                    <size key="itemSize" width="310" height="145"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BannerCell" id="9Z6-LI-i6T" customClass="BannerCollectionViewCell" customModule="Hows_ing" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-15.666666666666666" width="310" height="145"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ORE-mP-cFD">
+                                            <rect key="frame" x="0.0" y="0.0" width="310" height="145"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LnT-1v-kYd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="310" height="145"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uh-PM-nMc">
+                                                            <rect key="frame" x="129.66666666666666" y="41" width="51" height="24"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="24" id="Wna-Qj-HE7"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Pretendard-Bold" family="Pretendard" pointSize="20"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자세히보기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1d-2c-4Dc">
+                                                            <rect key="frame" x="120.66666666666669" y="86" width="69" height="16"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="69" id="1UR-cf-skQ"/>
+                                                                <constraint firstAttribute="height" constant="16" id="jaq-Ez-6SK"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="9"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="I1d-2c-4Dc" firstAttribute="top" secondItem="7uh-PM-nMc" secondAttribute="bottom" constant="21" id="5Ge-SR-jbL"/>
+                                                        <constraint firstItem="7uh-PM-nMc" firstAttribute="centerX" secondItem="LnT-1v-kYd" secondAttribute="centerX" id="M8h-v6-orN"/>
+                                                        <constraint firstItem="I1d-2c-4Dc" firstAttribute="centerX" secondItem="LnT-1v-kYd" secondAttribute="centerX" id="SJi-B4-FUY"/>
+                                                        <constraint firstItem="7uh-PM-nMc" firstAttribute="top" secondItem="LnT-1v-kYd" secondAttribute="top" constant="41" id="ykj-ae-7cm"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="LnT-1v-kYd" firstAttribute="leading" secondItem="ORE-mP-cFD" secondAttribute="leading" id="AWS-ua-tjD"/>
+                                                <constraint firstAttribute="bottom" secondItem="LnT-1v-kYd" secondAttribute="bottom" id="Cht-rV-3ZY"/>
+                                                <constraint firstAttribute="trailing" secondItem="LnT-1v-kYd" secondAttribute="trailing" id="DES-kl-DZw"/>
+                                                <constraint firstItem="LnT-1v-kYd" firstAttribute="top" secondItem="ORE-mP-cFD" secondAttribute="top" id="IPH-BC-Vz4"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="310" height="145"/>
+                                        <connections>
+                                            <outlet property="BGView" destination="LnT-1v-kYd" id="xuW-NX-scJ"/>
+                                            <outlet property="Title" destination="7uh-PM-nMc" id="Zvi-Py-Adw"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zf5-xC-w82">
                                 <rect key="frame" x="12" y="187" width="14" height="14"/>
@@ -232,6 +289,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

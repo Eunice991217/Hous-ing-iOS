@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var Banner: UICollectionView!
     @IBOutlet weak var TabbarView: UIView!
     @IBOutlet weak var PaperIcon:  UIImageView!
@@ -15,6 +15,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var PaperText: UILabel!
     @IBOutlet weak var HomeText: UILabel!
     let pageLock = NSLock()
+    var bannerData:[BannerData] = []
     var tapNum: Int = 0
     
     override func viewDidLoad() {
@@ -33,7 +34,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         TabbarView.layer.shadowColor = UIColor.black.cgColor
         TabbarView.layer.shadowOpacity = 0.2
         TabbarView.layer.shadowRadius = 24 / UIScreen.main.scale
-        
+        makeDummyData()
+    }
+    
+    func makeDummyData(){
+        bannerData.append(BannerData(title: "AI, 주택청약 당첨 확률 알려줘! 👀", bgColor: "BannerYellow"))
+        bannerData.append(BannerData(title: "미래 집값, 예측할 수 있다고? 🏠", bgColor: "BannerOrange"))
     }
     
     @IBAction func PaperButtonTap(_ sender: Any) {
@@ -63,11 +69,28 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return bannerData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BannerCell", for: indexPath) as? BannerCollectionViewCell else{
+            return UICollectionViewCell()
+        }
+        
+        cell.BGView.backgroundColor = UIColor(named: bannerData[indexPath.row].bgColor)
+        cell.Title.text = bannerData[indexPath.row].title
+        cell.Title.textColor = UIColor.white
+        
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: Banner.frame.width, height: Banner.frame.height)
     }
 }
 
+struct BannerData{
+    let title, bgColor: String
+}
