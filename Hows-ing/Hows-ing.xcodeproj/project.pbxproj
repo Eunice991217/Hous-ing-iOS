@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		48876C742AD2816C007EDAF5 /* realEstate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48876C732AD2816C007EDAF5 /* realEstate.storyboard */; };
+		48876C782AD28CE9007EDAF5 /* mapCont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48876C772AD28CE9007EDAF5 /* mapCont.swift */; };
 		8B2ADE852AD25ADC00213F84 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2ADE7C2AD25ADC00213F84 /* Pretendard-Regular.otf */; };
 		8B2ADE862AD25ADC00213F84 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2ADE7D2AD25ADC00213F84 /* Pretendard-Thin.otf */; };
 		8B2ADE872AD25ADC00213F84 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2ADE7E2AD25ADC00213F84 /* Pretendard-Black.otf */; };
@@ -23,10 +24,15 @@
 		8BAA991B2AD1551A00EF4746 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BAA99192AD1551A00EF4746 /* Main.storyboard */; };
 		8BAA991D2AD1551B00EF4746 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BAA991C2AD1551B00EF4746 /* Assets.xcassets */; };
 		8BAA99202AD1551B00EF4746 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BAA991E2AD1551B00EF4746 /* LaunchScreen.storyboard */; };
+		9BCDC22D51311EC636561360 /* Pods_Hows_ing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D242B8B2653EACFC0B4962 /* Pods_Hows_ing.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41CB422A137929E06455FA28 /* Pods-Hows-ing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hows-ing.debug.xcconfig"; path = "Target Support Files/Pods-Hows-ing/Pods-Hows-ing.debug.xcconfig"; sourceTree = "<group>"; };
 		48876C732AD2816C007EDAF5 /* realEstate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = realEstate.storyboard; sourceTree = "<group>"; };
+		48876C772AD28CE9007EDAF5 /* mapCont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapCont.swift; sourceTree = "<group>"; };
+		48876C792AD29792007EDAF5 /* Hows-ing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hows-ing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		863A63D3137CBAD58DE2859B /* Pods-Hows-ing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hows-ing.release.xcconfig"; path = "Target Support Files/Pods-Hows-ing/Pods-Hows-ing.release.xcconfig"; sourceTree = "<group>"; };
 		8B2ADE7C2AD25ADC00213F84 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		8B2ADE7D2AD25ADC00213F84 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
 		8B2ADE7E2AD25ADC00213F84 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
@@ -36,7 +42,6 @@
 		8B2ADE822AD25ADC00213F84 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
 		8B2ADE832AD25ADC00213F84 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		8B2ADE842AD25ADC00213F84 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
-		8BAA99102AD1551A00EF4746 /* Hows-ing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hows-ing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BAA99132AD1551A00EF4746 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BAA99152AD1551A00EF4746 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8BAA99172AD1551A00EF4746 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +49,7 @@
 		8BAA991C2AD1551B00EF4746 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BAA991F2AD1551B00EF4746 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BAA99212AD1551B00EF4746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9D242B8B2653EACFC0B4962 /* Pods_Hows_ing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hows_ing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,12 +57,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BCDC22D51311EC636561360 /* Pods_Hows_ing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B2CD7981BDC08B0FE0B30E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9D242B8B2653EACFC0B4962 /* Pods_Hows_ing.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48876C762AD28CCB007EDAF5 /* realEstate */ = {
+			isa = PBXGroup;
+			children = (
+				48876C772AD28CE9007EDAF5 /* mapCont.swift */,
+			);
+			path = realEstate;
+			sourceTree = "<group>";
+		};
+		84B6ECF600BA31537A8D880E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				41CB422A137929E06455FA28 /* Pods-Hows-ing.debug.xcconfig */,
+				863A63D3137CBAD58DE2859B /* Pods-Hows-ing.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8B2ADE652AD259FA00213F84 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +138,7 @@
 		8B2ADE692AD25A5100213F84 /* VCS */ = {
 			isa = PBXGroup;
 			children = (
+				48876C762AD28CCB007EDAF5 /* realEstate */,
 				8BAA99172AD1551A00EF4746 /* ViewController.swift */,
 			);
 			path = VCS;
@@ -115,16 +148,10 @@
 			isa = PBXGroup;
 			children = (
 				8BAA99122AD1551A00EF4746 /* Hows-ing */,
-				8BAA99112AD1551A00EF4746 /* Products */,
+				84B6ECF600BA31537A8D880E /* Pods */,
+				1B2CD7981BDC08B0FE0B30E8 /* Frameworks */,
+				48876C792AD29792007EDAF5 /* Hows-ing.app */,
 			);
-			sourceTree = "<group>";
-		};
-		8BAA99112AD1551A00EF4746 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8BAA99102AD1551A00EF4746 /* Hows-ing.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		8BAA99122AD1551A00EF4746 /* Hows-ing */ = {
@@ -144,9 +171,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BAA99242AD1551B00EF4746 /* Build configuration list for PBXNativeTarget "Hows-ing" */;
 			buildPhases = (
+				3C5BF558B329403EBD957633 /* [CP] Check Pods Manifest.lock */,
 				8BAA990C2AD1551A00EF4746 /* Sources */,
 				8BAA990D2AD1551A00EF4746 /* Frameworks */,
 				8BAA990E2AD1551A00EF4746 /* Resources */,
+				003AE6DFAB5498D7274E5F74 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,7 +183,7 @@
 			);
 			name = "Hows-ing";
 			productName = "Hows-ing";
-			productReference = 8BAA99102AD1551A00EF4746 /* Hows-ing.app */;
+			productReference = 48876C792AD29792007EDAF5 /* Hows-ing.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -181,7 +210,7 @@
 				Base,
 			);
 			mainGroup = 8BAA99072AD1551A00EF4746;
-			productRefGroup = 8BAA99112AD1551A00EF4746 /* Products */;
+			productRefGroup = 8BAA99072AD1551A00EF4746;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -213,6 +242,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		003AE6DFAB5498D7274E5F74 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hows-ing/Pods-Hows-ing-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hows-ing/Pods-Hows-ing-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hows-ing/Pods-Hows-ing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C5BF558B329403EBD957633 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hows-ing-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8BAA990C2AD1551A00EF4746 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -220,6 +291,7 @@
 			files = (
 				8BAA99182AD1551A00EF4746 /* ViewController.swift in Sources */,
 				8BAA99142AD1551A00EF4746 /* AppDelegate.swift in Sources */,
+				48876C782AD28CE9007EDAF5 /* mapCont.swift in Sources */,
 				8BAA99162AD1551A00EF4746 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,13 +439,18 @@
 		};
 		8BAA99252AD1551B00EF4746 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41CB422A137929E06455FA28 /* Pods-Hows-ing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Hows-ing/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "위치정보 권한이 필요합니다. (항상 or 앱을 사용하는 동안 위치정보를 수신합니다.)";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "위치정보 권한이 필요합니다. (항상 위치정보를 수신합니다.)";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치정보 권한이 필요합니다. (앱을 사용하는 동안에만 위치정보를 수신합니다.)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -395,13 +472,18 @@
 		};
 		8BAA99262AD1551B00EF4746 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 863A63D3137CBAD58DE2859B /* Pods-Hows-ing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Hows-ing/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "위치정보 권한이 필요합니다. (항상 or 앱을 사용하는 동안 위치정보를 수신합니다.)";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "위치정보 권한이 필요합니다. (항상 위치정보를 수신합니다.)";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치정보 권한이 필요합니다. (앱을 사용하는 동안에만 위치정보를 수신합니다.)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

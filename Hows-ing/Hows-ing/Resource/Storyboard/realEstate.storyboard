@@ -1,25 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pretendard-Bold.otf">
+            <string>Pretendard-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--mapCont-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" userLabel="mapCont" customClass="mapCont" customModule="Hows_ing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5XH-lN-68G">
+                                <rect key="frame" x="0.0" y="59" width="393" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="부동산" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XjI-WM-ad4">
+                                        <rect key="frame" x="20.000000000000004" y="25.666666666666671" width="62.333333333333343" height="28.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="Pretendard-Bold" family="Pretendard" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="XjI-WM-ad4" firstAttribute="centerY" secondItem="5XH-lN-68G" secondAttribute="centerY" id="2kl-aR-kPg"/>
+                                    <constraint firstAttribute="height" constant="80" id="gLh-pw-oxs"/>
+                                    <constraint firstItem="XjI-WM-ad4" firstAttribute="leading" secondItem="5XH-lN-68G" secondAttribute="leading" constant="20" id="utZ-DE-jyz"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P8b-xH-8lE" customClass="NMFMapView">
+                                <rect key="frame" x="0.0" y="139" width="393" height="679"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="P8b-xH-8lE" firstAttribute="top" secondItem="5XH-lN-68G" secondAttribute="bottom" id="5Qk-Cn-J2P"/>
+                            <constraint firstItem="P8b-xH-8lE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="6gW-Iv-RN0"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="P8b-xH-8lE" secondAttribute="bottom" id="Syy-Xf-ohe"/>
+                            <constraint firstItem="5XH-lN-68G" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="V4X-ms-skm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="P8b-xH-8lE" secondAttribute="trailing" id="hat-Ms-d7g"/>
+                            <constraint firstItem="5XH-lN-68G" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="lGE-aT-qTu"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5XH-lN-68G" secondAttribute="trailing" id="lSS-qb-GiA"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="P8b-xH-8lE" id="vMt-4Z-9PN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="113" y="-2"/>
         </scene>
     </scenes>
     <resources>
