@@ -200,7 +200,10 @@ class SelectingConditionViewController: UIViewController {
         DropDown.appearance().backgroundColor = UIColor.white // 아이템 팝업 배경 색상
         DropDown.appearance().selectionBackgroundColor = UIColor.white // 선택한 아이템 배경 색상
         DropDown.appearance().setupCornerRadius(8)
+        
         noHouseDropdown.dismissMode = .automatic // 팝업을 닫을 모드 설정
+        joinAccountDropdown.dismissMode = .automatic
+        moneyAmountDropdown.dismissMode = .automatic
                     
     }
     
@@ -224,7 +227,6 @@ class SelectingConditionViewController: UIViewController {
             self!.havingNoHousePeriod = item
             self!.noHouseDropBtn.setImage(UIImage(named: "down"), for: .normal)
             self!.setSubmitBtn()
-            print(self!.havingNoHousePeriod )
 
 
         }
@@ -239,8 +241,6 @@ class SelectingConditionViewController: UIViewController {
             self!.joinAccountPeriod = item
             self!.joinAccountDropBtn.setImage(UIImage(named: "down"), for: .normal)
             self!.setSubmitBtn()
-            print(self!.joinAccountPeriod)
-
 
         }
         joinAccountDropdown.cancelAction = { [weak self] in
@@ -253,8 +253,6 @@ class SelectingConditionViewController: UIViewController {
             self!.moneyAmmount = item
             self!.moneyAmountDropBtn.setImage(UIImage(named: "down"), for: .normal)
             self!.setSubmitBtn()
-            print(self!.moneyAmmount)
-
         }
         moneyAmountDropdown.cancelAction = { [weak self] in // 취소 시 처리
             //빈 화면 터치 시 DropDown이 사라지고 아이콘을 원래대로 변경

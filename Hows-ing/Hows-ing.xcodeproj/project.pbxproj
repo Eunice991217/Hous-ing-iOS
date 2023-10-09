@@ -11,6 +11,7 @@
 		32803E422AD2F35200BD99BD /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32803E412AD2F35200BD99BD /* FontManager.swift */; };
 		32803E442AD2F72F00BD99BD /* SelectingConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32803E432AD2F72F00BD99BD /* SelectingConditionViewController.swift */; };
 		32803E482AD2FFCA00BD99BD /* DropDown in Frameworks */ = {isa = PBXBuildFile; productRef = 32803E472AD2FFCA00BD99BD /* DropDown */; };
+		32803E4A2AD3DB1400BD99BD /* SelectingLocalConditionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32803E492AD3DB1400BD99BD /* SelectingLocalConditionVC.swift */; };
 		32950C982AD2BBF6007D5A4B /* Subscription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32950C972AD2BBF6007D5A4B /* Subscription.storyboard */; };
 		8B2ADE852AD25ADC00213F84 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2ADE7C2AD25ADC00213F84 /* Pretendard-Regular.otf */; };
 		8B2ADE862AD25ADC00213F84 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2ADE7D2AD25ADC00213F84 /* Pretendard-Thin.otf */; };
@@ -34,6 +35,7 @@
 		3267CA142AD2EBAE0087A671 /* SelectingConditionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectingConditionView.swift; sourceTree = "<group>"; };
 		32803E412AD2F35200BD99BD /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		32803E432AD2F72F00BD99BD /* SelectingConditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectingConditionViewController.swift; sourceTree = "<group>"; };
+		32803E492AD3DB1400BD99BD /* SelectingLocalConditionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectingLocalConditionVC.swift; sourceTree = "<group>"; };
 		32950C972AD2BBF6007D5A4B /* Subscription.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Subscription.storyboard; sourceTree = "<group>"; };
 		8B2ADE7C2AD25ADC00213F84 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		8B2ADE7D2AD25ADC00213F84 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			children = (
 				8BAA99172AD1551A00EF4746 /* ViewController.swift */,
 				32803E432AD2F72F00BD99BD /* SelectingConditionViewController.swift */,
+				32803E492AD3DB1400BD99BD /* SelectingLocalConditionVC.swift */,
 			);
 			path = VCS;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			files = (
 				32803E422AD2F35200BD99BD /* FontManager.swift in Sources */,
 				8BAA99182AD1551A00EF4746 /* ViewController.swift in Sources */,
+				32803E4A2AD3DB1400BD99BD /* SelectingLocalConditionVC.swift in Sources */,
 				8BAA99142AD1551A00EF4746 /* AppDelegate.swift in Sources */,
 				8BAA99162AD1551A00EF4746 /* SceneDelegate.swift in Sources */,
 				3267CA152AD2EBAE0087A671 /* SelectingConditionView.swift in Sources */,
