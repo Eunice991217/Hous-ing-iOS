@@ -104,6 +104,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         tapNum = 1
     }
     
+    @IBAction func SubscriptionByLocation(_ sender: Any) {
+        let sb = UIStoryboard(name: "SubscriptionByLocation", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "SubscriptionInfo")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return bannerData.count
     }
