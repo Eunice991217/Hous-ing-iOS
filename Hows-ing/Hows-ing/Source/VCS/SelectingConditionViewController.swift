@@ -24,7 +24,7 @@ class SelectingConditionViewController: UIViewController {
 
 
     // DropDown 아이템 리스트
-    let noHouseItemList = ["0-1년", "1-2년", "2-3년", "3-4년"]
+    let noHouseItemList = ["유주택", "유주택, 30세 미만 미혼인 무주택", "1년 미만", "1-2년", "2-3년", "3-4년","4-5년","5-6년","6-7년","7-8년","8-9년", "9-10년", "10-11년", "11-12년","12-13년","13-14년","14-15년", "15년 이상"]
     let joinAccountItemList = ["0-1년", "1-2년", "2-3년", "3-4년"]
     let moneyAmountItemList = ["100만원 이하", "100 - 1000만원", "1000- 2500만원", "2500 - 5000만원", "5000만원 이상"]
 
