@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NIe-DR-F33">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4LH-Oh-c2T">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -614,7 +614,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="Slm-e2-ivC" kind="show" id="Ltc-Uf-5Kr"/>
+                                    <action selector="submitBtnDidTap:" destination="E0t-HL-7Ni" eventType="touchUpInside" id="Ov6-fK-DUH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -658,41 +658,41 @@
             </objects>
             <point key="canvasLocation" x="2468" y="-62"/>
         </scene>
-        <!--View Controller-->
+        <!--Loading View Controller-->
         <scene sceneID="2N7-Uf-5nG">
             <objects>
-                <viewController id="Slm-e2-ivC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoadingViewController" id="Slm-e2-ivC" customClass="LoadingViewController" customModule="Hows_ing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L2k-C4-Tar">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlueLogo" translatesAutoresizingMaskIntoConstraints="NO" id="2ZG-Cw-5vA">
-                                <rect key="frame" x="163.66666666666666" y="386.33333333333331" width="63" height="65"/>
+                                <rect key="frame" x="163.66666666666666" y="366" width="63" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="63" id="4Ht-jB-08p"/>
                                     <constraint firstAttribute="height" constant="65" id="WvK-r5-riv"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AI가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82Z-TI-Dgt">
-                                <rect key="frame" x="173" y="336.33333333333331" width="44" height="29"/>
+                                <rect key="frame" x="173" y="316" width="44" height="29"/>
                                 <fontDescription key="fontDescription" name="neurimboGothicRegular" family="neurimbo Gothic" pointSize="24"/>
                                 <color key="textColor" name="CobaltBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•••" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sea-BR-E2v">
-                                <rect key="frame" x="77.666666666666671" y="397.33333333333331" width="56.000000000000014" height="43"/>
+                                <rect key="frame" x="77.666666666666671" y="377" width="56.000000000000014" height="43"/>
                                 <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="36"/>
                                 <color key="textColor" name="CobaltBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•••" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDu-dn-1Do">
-                                <rect key="frame" x="256.66666666666669" y="397.33333333333331" width="56" height="43"/>
+                                <rect key="frame" x="256.66666666666669" y="377" width="56" height="43"/>
                                 <fontDescription key="fontDescription" name="Pretendard-Regular" family="Pretendard" pointSize="36"/>
                                 <color key="textColor" name="CobaltBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIT한 청약 찾는 중" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vI5-Sh-bod">
-                                <rect key="frame" x="141" y="471.33333333333331" width="108" height="57.666666666666686"/>
+                                <rect key="frame" x="141" y="451" width="108" height="57.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="108" id="qKz-4c-zFN"/>
                                 </constraints>
@@ -720,12 +720,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JyJ-do-M5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3350.7692307692305" y="-62.559241706161131"/>
+            <point key="canvasLocation" x="3148" y="-63"/>
         </scene>
-        <!--View Controller-->
+        <!--Subscription Result View Controller-->
         <scene sceneID="bEx-L8-10s">
             <objects>
-                <viewController id="4LH-Oh-c2T" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SubscriptionResultViewController" id="4LH-Oh-c2T" customClass="SubscriptionResultViewController" customModule="Hows_ing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Ha-3i-s4H">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -783,23 +783,20 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyM-ME-JNy">
                                 <rect key="frame" x="36" y="451" width="318" height="44"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="보통" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYR-Ng-Xx2">
-                                        <rect key="frame" x="16" y="8" width="25" height="17"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="보통" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYR-Ng-Xx2">
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="44"/>
                                         <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="14"/>
                                         <color key="textColor" name="8Fgrey"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="매우 높음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yk9-li-rWt">
-                                        <rect key="frame" x="258" y="14" width="52" height="17"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="매우 높음" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yk9-li-rWt">
+                                        <rect key="frame" x="210" y="0.0" width="108" height="44"/>
                                         <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="14"/>
                                         <color key="textColor" name="8Fgrey"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="높음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SsW-Wb-7CV">
-                                        <rect key="frame" x="126" y="8" width="25" height="17"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="높음" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SsW-Wb-7CV">
+                                        <rect key="frame" x="105" y="0.0" width="105" height="44"/>
                                         <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="14"/>
                                         <color key="textColor" name="8Fgrey"/>
                                         <nil key="highlightedColor"/>
@@ -807,6 +804,21 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="Yk9-li-rWt" firstAttribute="centerY" secondItem="SsW-Wb-7CV" secondAttribute="centerY" id="1La-s9-C9l"/>
+                                    <constraint firstItem="SsW-Wb-7CV" firstAttribute="centerY" secondItem="EYR-Ng-Xx2" secondAttribute="centerY" id="4D6-09-gYL"/>
+                                    <constraint firstItem="EYR-Ng-Xx2" firstAttribute="top" secondItem="lyM-ME-JNy" secondAttribute="top" id="5a8-QC-zSd"/>
+                                    <constraint firstAttribute="bottom" secondItem="SsW-Wb-7CV" secondAttribute="bottom" id="9Qg-dv-rgz"/>
+                                    <constraint firstItem="Yk9-li-rWt" firstAttribute="leading" secondItem="SsW-Wb-7CV" secondAttribute="trailing" id="MHD-24-M3p"/>
+                                    <constraint firstAttribute="bottom" secondItem="Yk9-li-rWt" secondAttribute="bottom" id="VwZ-CX-anX"/>
+                                    <constraint firstItem="SsW-Wb-7CV" firstAttribute="width" secondItem="lyM-ME-JNy" secondAttribute="width" multiplier="0.33" id="Ybp-zu-89R"/>
+                                    <constraint firstAttribute="bottom" secondItem="EYR-Ng-Xx2" secondAttribute="bottom" id="Zu9-HA-Tk8"/>
+                                    <constraint firstItem="SsW-Wb-7CV" firstAttribute="leading" secondItem="EYR-Ng-Xx2" secondAttribute="trailing" id="at8-Iu-KMe"/>
+                                    <constraint firstItem="SsW-Wb-7CV" firstAttribute="top" secondItem="lyM-ME-JNy" secondAttribute="top" id="auy-Rm-3La"/>
+                                    <constraint firstItem="EYR-Ng-Xx2" firstAttribute="width" secondItem="lyM-ME-JNy" secondAttribute="width" multiplier="0.33" id="bxA-7I-xF6"/>
+                                    <constraint firstItem="Yk9-li-rWt" firstAttribute="top" secondItem="lyM-ME-JNy" secondAttribute="top" id="fFr-MM-pwq"/>
+                                    <constraint firstItem="EYR-Ng-Xx2" firstAttribute="leading" secondItem="lyM-ME-JNy" secondAttribute="leading" id="k45-le-Yrm"/>
+                                    <constraint firstItem="EYR-Ng-Xx2" firstAttribute="centerY" secondItem="lyM-ME-JNy" secondAttribute="centerY" id="pCx-gJ-8om"/>
+                                    <constraint firstItem="Yk9-li-rWt" firstAttribute="width" secondItem="lyM-ME-JNy" secondAttribute="width" multiplier="0.34" id="tc7-ST-cNV"/>
                                     <constraint firstAttribute="height" constant="44" id="zSI-tT-Otn"/>
                                 </constraints>
                             </view>
@@ -838,6 +850,12 @@
                             <constraint firstItem="jcY-ia-wLo" firstAttribute="trailing" secondItem="oTO-nk-G3q" secondAttribute="trailing" constant="-45" id="zZz-op-F7f"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="highLabel" destination="SsW-Wb-7CV" id="QxC-E5-GLs"/>
+                        <outlet property="normalLabel" destination="EYR-Ng-Xx2" id="gwH-Ji-llb"/>
+                        <outlet property="resultView" destination="lyM-ME-JNy" id="dMv-h7-H3p"/>
+                        <outlet property="veryHighLabel" destination="Yk9-li-rWt" id="g9A-9T-1JN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bDF-02-K8i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

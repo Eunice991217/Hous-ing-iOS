@@ -52,6 +52,13 @@ class SelectingLocalConditionVC: UIViewController {
     @IBOutlet weak var districtDropBtn: UIButton!
     @IBOutlet weak var squareFeetDropBtn: UIButton!
     
+    @IBAction func submitBtnDidTap(_ sender: Any) {
+
+        let newViewController = self.storyboard!.instantiateViewController(identifier: "LoadingViewController")
+        newViewController.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+        self.present(newViewController, animated: false)
+    }
+    
     func initUI() {
         // DropDown View의 배경
         cityDropView.layer.cornerRadius = 8

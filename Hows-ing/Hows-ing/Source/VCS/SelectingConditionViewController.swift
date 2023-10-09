@@ -281,12 +281,10 @@ class SelectingConditionViewController: UIViewController {
             submitBtn.layer.backgroundColor = UIColor(red: 0.247, green: 0.51, blue: 0.969, alpha: 1).cgColor
             submitBtn.setTitleColor(.white, for: .normal)
             submitBtn.isEnabled = true
-            print("만족")
         }else{
             submitBtn.layer.backgroundColor = UIColor(red: 0.851, green: 0.851, blue: 0.851, alpha: 1).cgColor
             submitBtn.setTitleColor(UIColor(red: 0.613, green: 0.613, blue: 0.613, alpha: 1), for: .normal)
             submitBtn.isEnabled = false
-            print("블만족")
 
         }
     }
