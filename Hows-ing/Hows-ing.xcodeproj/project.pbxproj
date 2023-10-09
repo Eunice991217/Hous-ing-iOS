@@ -23,6 +23,7 @@
 		8BAA991D2AD1551B00EF4746 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BAA991C2AD1551B00EF4746 /* Assets.xcassets */; };
 		8BAA99202AD1551B00EF4746 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BAA991E2AD1551B00EF4746 /* LaunchScreen.storyboard */; };
 		8BDFD2172AD283F70028A43E /* neurimboGothic-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8BDFD2162AD283F70028A43E /* neurimboGothic-Regular.otf */; };
+		8BDFD2192AD298730028A43E /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDFD2182AD298730028A43E /* BannerCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		8BAA991F2AD1551B00EF4746 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BAA99212AD1551B00EF4746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BDFD2162AD283F70028A43E /* neurimboGothic-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "neurimboGothic-Regular.otf"; sourceTree = "<group>"; };
+		8BDFD2182AD298730028A43E /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				8B2ADE692AD25A5100213F84 /* VCS */,
 				8BAA99132AD1551A00EF4746 /* AppDelegate.swift */,
 				8BAA99152AD1551A00EF4746 /* SceneDelegate.swift */,
+				8BDFD2182AD298730028A43E /* BannerCollectionViewCell.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			files = (
 				8BAA99182AD1551A00EF4746 /* ViewController.swift in Sources */,
 				8BAA99142AD1551A00EF4746 /* AppDelegate.swift in Sources */,
+				8BDFD2192AD298730028A43E /* BannerCollectionViewCell.swift in Sources */,
 				8BAA99162AD1551A00EF4746 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
