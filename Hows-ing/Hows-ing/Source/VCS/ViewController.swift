@@ -18,6 +18,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var Button2View: UIView!
     @IBOutlet weak var Button1Title: UILabel!
     @IBOutlet weak var Button2Title: UILabel!
+    @IBOutlet weak var dot: UILabel!
+    @IBOutlet weak var advText: UILabel!
     let pageLock = NSLock()
     var bannerData:[BannerData] = []
     var tapNum: Int = 0
@@ -56,7 +58,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         Button1Title.text = "지역별\n청약 정보"
         
         Button2Title.text = "나에게 딱 맞는\n청약은?"
-     
+        
+        
+        dot.font = UIFont(name: "Pretendard-Medium", size: 10)
+        dot.numberOfLines = 0
+        dot.lineBreakMode = .byWordWrapping
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineHeightMultiple = 1.51
+        dot.attributedText = NSMutableAttributedString(string: dot.text!, attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
+        
+        advText.font = UIFont(name: "Pretendard-Medium", size: 10)
+        advText.numberOfLines = 0
+        advText.lineBreakMode = .byWordWrapping
+        advText.attributedText = NSMutableAttributedString(string: "납인원금 5,000만원 한도 내, 신규가입일로부터 2년 이상인 경우 가입일로부터 10년 이내에서 무주택인 기간에 한하여 기존「주택청약종합저축」 이율에 우대이율(1.5%p)을 더한 이율 적용", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
     }
     
     func makeDummyData(){
