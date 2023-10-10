@@ -201,13 +201,13 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아직 가입 안 하셨나요? 💡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjE-dY-zFC">
-                                                <rect key="frame" x="38" y="444" width="247" height="28.666666666666686"/>
+                                                <rect key="frame" x="38" y="444" width="247" height="28"/>
                                                 <fontDescription key="fontDescription" name="Pretendard-Bold" family="Pretendard" pointSize="24"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3cj-xO-vUs">
-                                                <rect key="frame" x="35" y="513.66666666666663" width="323" height="319"/>
+                                                <rect key="frame" x="35" y="513" width="323" height="319"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="청년우대형 주택청약종합저축" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLH-Bu-QOF">
                                                         <rect key="frame" x="18" y="21" width="195" height="20"/>
@@ -380,7 +380,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• 소득확인증명서, 원천징수영수증" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGC-4P-ho1">
-                                                        <rect key="frame" x="21" y="155" width="133.66666666666666" height="18"/>
+                                                        <rect key="frame" x="21" y="155" width="133" height="18"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="18" id="I2l-AK-Dxg"/>
                                                         </constraints>
@@ -704,6 +704,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QXc-ai-JqY">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

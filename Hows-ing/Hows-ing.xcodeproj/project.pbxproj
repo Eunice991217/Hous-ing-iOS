@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B0FFA892AD5637200CCC5AC /* SubscriptionInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0FFA882AD5637200CCC5AC /* SubscriptionInfoTableViewCell.swift */; };
 		8B2ADE852AD25ADC00213F84 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2ADE7C2AD25ADC00213F84 /* Pretendard-Regular.otf */; };
 		8B2ADE862AD25ADC00213F84 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2ADE7D2AD25ADC00213F84 /* Pretendard-Thin.otf */; };
 		8B2ADE872AD25ADC00213F84 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2ADE7E2AD25ADC00213F84 /* Pretendard-Black.otf */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B0FFA882AD5637200CCC5AC /* SubscriptionInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionInfoTableViewCell.swift; sourceTree = "<group>"; };
 		8B2ADE7C2AD25ADC00213F84 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		8B2ADE7D2AD25ADC00213F84 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
 		8B2ADE7E2AD25ADC00213F84 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				8BAA99132AD1551A00EF4746 /* AppDelegate.swift */,
 				8BAA99152AD1551A00EF4746 /* SceneDelegate.swift */,
 				8BDFD2182AD298730028A43E /* BannerCollectionViewCell.swift */,
+				8B0FFA882AD5637200CCC5AC /* SubscriptionInfoTableViewCell.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			files = (
 				8BAA99182AD1551A00EF4746 /* ViewController.swift in Sources */,
 				8BAA99142AD1551A00EF4746 /* AppDelegate.swift in Sources */,
+				8B0FFA892AD5637200CCC5AC /* SubscriptionInfoTableViewCell.swift in Sources */,
 				8BDFD2192AD298730028A43E /* BannerCollectionViewCell.swift in Sources */,
 				8BBC8EDD2AD4F78D00D52F93 /* SubscriptionInfoViewController.swift in Sources */,
 				8BAA99162AD1551A00EF4746 /* SceneDelegate.swift in Sources */,
