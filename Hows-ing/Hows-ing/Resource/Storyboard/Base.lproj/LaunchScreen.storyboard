@@ -8,11 +8,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="neurimboGothic-Regular.otf">
-            <string>neurimboGothicRegular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -29,28 +24,36 @@
                                     <constraint firstAttribute="width" constant="64" id="adE-al-qaw"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hous - ing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLZ-0l-AIt">
-                                <rect key="frame" x="130.33333333333331" y="521.66666666666663" width="132.33333333333331" height="33.666666666666629"/>
-                                <fontDescription key="fontDescription" name="neurimboGothicRegular" family="neurimbo Gothic" pointSize="28"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="하우징" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhW-y8-ccV">
-                                <rect key="frame" x="152.66666666666666" y="338.66666666666669" width="88" height="38.666666666666686"/>
-                                <fontDescription key="fontDescription" name="neurimboGothicRegular" family="neurimbo Gothic" pointSize="32"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Textlogo1" translatesAutoresizingMaskIntoConstraints="NO" id="PFF-AR-aYk">
+                                <rect key="frame" x="152.66666666666666" y="325.66666666666669" width="88" height="19.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="hn9-Hy-nHJ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Textlogo2" translatesAutoresizingMaskIntoConstraints="NO" id="bTn-fa-mEx">
+                                <rect key="frame" x="120.66666666666669" y="527.66666666666663" width="152" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="152" id="mcZ-3K-gtC"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="_-1" translatesAutoresizingMaskIntoConstraints="NO" id="Abq-Zw-7O9">
+                                <rect key="frame" x="197.66666666666666" y="534.66666666666663" width="23" height="3.6666666666666288"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="23" id="mDu-8O-Gq4"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="Blue"/>
+                        <color key="backgroundColor" name="HousingBlue"/>
                         <constraints>
-                            <constraint firstItem="wLZ-0l-AIt" firstAttribute="top" secondItem="ADR-Yr-3ap" secondAttribute="bottom" constant="51" id="1B9-vH-fpI"/>
-                            <constraint firstItem="wLZ-0l-AIt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2d6-hq-oDI"/>
                             <constraint firstItem="ADR-Yr-3ap" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="8hu-JF-8Pa"/>
-                            <constraint firstItem="BhW-y8-ccV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CyM-eZ-kud"/>
+                            <constraint firstItem="ADR-Yr-3ap" firstAttribute="top" secondItem="PFF-AR-aYk" secondAttribute="top" constant="81" id="Il7-Be-7nw"/>
+                            <constraint firstItem="ADR-Yr-3ap" firstAttribute="trailing" secondItem="Abq-Zw-7O9" secondAttribute="trailing" constant="8" id="NRq-ra-80u"/>
+                            <constraint firstItem="PFF-AR-aYk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RYP-h1-Yw5"/>
                             <constraint firstItem="ADR-Yr-3ap" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SIe-K2-wcp"/>
-                            <constraint firstItem="ADR-Yr-3ap" firstAttribute="top" secondItem="BhW-y8-ccV" secondAttribute="top" constant="68" id="SbH-3O-iMC"/>
+                            <constraint firstItem="Abq-Zw-7O9" firstAttribute="top" secondItem="ADR-Yr-3ap" secondAttribute="bottom" constant="64" id="eW3-Cf-xzr"/>
+                            <constraint firstItem="bTn-fa-mEx" firstAttribute="top" secondItem="ADR-Yr-3ap" secondAttribute="bottom" constant="57" id="t5z-N9-kNY"/>
+                            <constraint firstItem="bTn-fa-mEx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wdZ-2s-zLj"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -61,7 +64,10 @@
     </scenes>
     <resources>
         <image name="Logo" width="170.66667175292969" height="170.66667175292969"/>
-        <namedColor name="Blue">
+        <image name="Textlogo1" width="84.666664123535156" height="19.333333969116211"/>
+        <image name="Textlogo2" width="149.66667175292969" height="21"/>
+        <image name="_-1" width="18.666666030883789" height="3.6666667461395264"/>
+        <namedColor name="HousingBlue">
             <color red="0.24705882352941178" green="0.50980392156862742" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
