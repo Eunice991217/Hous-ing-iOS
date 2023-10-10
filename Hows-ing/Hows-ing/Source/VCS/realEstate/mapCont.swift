@@ -24,6 +24,10 @@ class mapCont: UIViewController, CLLocationManagerDelegate{
         mapView.allowsZooming = true // 줌 가능
         mapView.allowsScrolling = true // 스크롤 가능
         
+        // zoom level 지정
+        mapView.minZoomLevel = 5.0
+        mapView.maxZoomLevel = 18.0
+        
         // delegate 설정
         locationManager.delegate = self
         // 사용자에게 허용 받기 alert 띄우기
@@ -66,24 +70,23 @@ class mapCont: UIViewController, CLLocationManagerDelegate{
             // 토글 상태에 따라 이미지 변경
             if self.isToggled {
                 new_marker.iconImage = NMFOverlayImage(name: "markerDidTap")
-                // 뷰 생성 및 위치 설정
+                
                 let viewWidth: CGFloat = 60
                 let viewHeight: CGFloat = 50
                 let markerPosition = self.mapView.projection.point(from: new_marker.position)
-                let infoView = UIView(frame: CGRect(x: markerPosition.x - (viewWidth / 2), y: markerPosition.y - viewHeight - 80, width: viewWidth, height: viewHeight))
                 
-                infoView.backgroundColor = UIColor.white
-                infoView.layer.borderColor = UIColor(red: 63/255, green: 130/255, blue: 247/255, alpha: 1).cgColor
-                infoView.layer.borderWidth = 2
-                infoView.layer.cornerRadius = 5
+                // 이미지 뷰 생성
+                let imageView = UIImageView(image: UIImage(named: "markerView"))
+                imageView.frame = CGRect(x: markerPosition.x - (viewWidth / 2), y: markerPosition.y - viewHeight - 80, width: viewWidth, height: viewHeight)
                 
+                // StackView 생성 및 설정
                 let stackView = UIStackView()
                 stackView.axis = .vertical // 수직으로 배치
                 stackView.alignment = .center // 중앙 정렬
                 stackView.distribution = .fill // 두 레이블 사이에 공간을 균등하게 분배
-                stackView.layoutMargins = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0) // StackView의 상단과 하단 여백을 10으로 설정
+                stackView.layoutMargins = UIEdgeInsets(top: 5, left: 0, bottom: 10, right: 0)
                 stackView.isLayoutMarginsRelativeArrangement = true
-
+                
                 // 첫 번째 레이블 (label1)
                 let label1 = UILabel()
                 label1.text = "13평"
@@ -102,19 +105,18 @@ class mapCont: UIViewController, CLLocationManagerDelegate{
 
                 // StackView의 크기 및 위치 설정
                 stackView.frame = CGRect(x: 0, y: 0, width: viewWidth, height: viewHeight)
-                stackView.spacing = 5 // 레이블 사이의 간격 설정
+//                stackView.spacing = 5 // 레이블 사이의 간격 설정
 
-                // infoView에 StackView 추가
-                infoView.addSubview(stackView)
+                // 나머지 코드 (레이블 추가 등)
+                self.infoView = imageView
                 
-                self.infoView = infoView
+                // 뷰에 StackView 추가
+                imageView.addSubview(stackView)
                 
                 // 뷰를 지도에 추가
-                self.mapView.addSubview(infoView)
-                
+                self.mapView.addSubview(imageView)
                 
                 if let mapDetailCont = mapDetailCont as? mapDetailCont {
-                    
                     self.present(mapDetailCont, animated: true)
                 }
                 
