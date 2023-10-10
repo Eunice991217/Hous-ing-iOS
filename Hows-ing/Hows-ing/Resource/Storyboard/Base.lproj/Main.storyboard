@@ -601,7 +601,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="96x-MI-fic">
                                                 <rect key="frame" x="52" y="6.6666666666666288" width="61" height="69"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home" translatesAutoresizingMaskIntoConstraints="NO" id="yOa-iR-g9C">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="yOa-iR-g9C">
                                                         <rect key="frame" x="15.666666666666657" y="10" width="30" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="ibK-Ma-YCe"/>
@@ -720,7 +720,7 @@
         <image name="BG1" width="390" height="637"/>
         <image name="Button1" width="149.33332824707031" height="170.66667175292969"/>
         <image name="Button2" width="248.66667175292969" height="170.66667175292969"/>
-        <image name="Home" width="176" height="170.66667175292969"/>
+        <image name="HomeIcon" width="176" height="170.66667175292969"/>
         <image name="LeftArrow" width="14" height="15"/>
         <image name="PaperSelect" width="170.66667175292969" height="170.66667175292969"/>
         <image name="RightArrow" width="14" height="15"/>

@@ -90,7 +90,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.pageLock.lock()
         defer { self.pageLock.unlock() }
         PaperIcon.image = UIImage(named: "PaperSelect")
-        HomeIcon.image = UIImage(named: "Home")
+        HomeIcon.image = UIImage(named: "HomeIcon")
         PaperText.textColor = UIColor(named: "HousingBlue")
         HomeText.textColor = UIColor(named: "HousingGray")
         tapNum = 0
@@ -102,7 +102,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         self.pageLock.lock()
         defer { self.pageLock.unlock() }
-        PaperIcon.image = UIImage(named: "Paper")
+        PaperIcon.image = UIImage(named: "PaperIcon")
         HomeIcon.image = UIImage(named: "HomeSelect")
         PaperText.textColor = UIColor(named: "HousingGray")
         HomeText.textColor = UIColor(named: "HousingBlue")
