@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3267CA152AD2EBAE0087A671 /* SelectingConditionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267CA142AD2EBAE0087A671 /* SelectingConditionView.swift */; };
+		32803E422AD2F35200BD99BD /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32803E412AD2F35200BD99BD /* FontManager.swift */; };
+		32803E442AD2F72F00BD99BD /* SelectingConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32803E432AD2F72F00BD99BD /* SelectingConditionViewController.swift */; };
+		32803E482AD2FFCA00BD99BD /* DropDown in Frameworks */ = {isa = PBXBuildFile; productRef = 32803E472AD2FFCA00BD99BD /* DropDown */; };
+		32803E4A2AD3DB1400BD99BD /* SelectingLocalConditionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32803E492AD3DB1400BD99BD /* SelectingLocalConditionVC.swift */; };
+		32803E4C2AD3ED8300BD99BD /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32803E4B2AD3ED8300BD99BD /* LoadingViewController.swift */; };
+		32803E4E2AD3EE8300BD99BD /* SubscriptionResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32803E4D2AD3EE8300BD99BD /* SubscriptionResultViewController.swift */; };
+		32950C982AD2BBF6007D5A4B /* Subscription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32950C972AD2BBF6007D5A4B /* Subscription.storyboard */; };
 		4865E8F22AD2BA6C00BAB81A /* mapDetailCont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4865E8F12AD2BA6C00BAB81A /* mapDetailCont.swift */; };
 		48876C742AD2816C007EDAF5 /* realEstate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48876C732AD2816C007EDAF5 /* realEstate.storyboard */; };
 		48876C782AD28CE9007EDAF5 /* mapCont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48876C772AD28CE9007EDAF5 /* mapCont.swift */; };
@@ -31,6 +39,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3267CA142AD2EBAE0087A671 /* SelectingConditionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectingConditionView.swift; sourceTree = "<group>"; };
+		32803E412AD2F35200BD99BD /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		32803E432AD2F72F00BD99BD /* SelectingConditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectingConditionViewController.swift; sourceTree = "<group>"; };
+		32803E492AD3DB1400BD99BD /* SelectingLocalConditionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectingLocalConditionVC.swift; sourceTree = "<group>"; };
+		32803E4B2AD3ED8300BD99BD /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		32803E4D2AD3EE8300BD99BD /* SubscriptionResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionResultViewController.swift; sourceTree = "<group>"; };
+		32950C972AD2BBF6007D5A4B /* Subscription.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Subscription.storyboard; sourceTree = "<group>"; };
 		41CB422A137929E06455FA28 /* Pods-Hows-ing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hows-ing.debug.xcconfig"; path = "Target Support Files/Pods-Hows-ing/Pods-Hows-ing.debug.xcconfig"; sourceTree = "<group>"; };
 		4865E8F12AD2BA6C00BAB81A /* mapDetailCont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapDetailCont.swift; sourceTree = "<group>"; };
 		48876C732AD2816C007EDAF5 /* realEstate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = realEstate.storyboard; sourceTree = "<group>"; };
@@ -73,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32803E482AD2FFCA00BD99BD /* DropDown in Frameworks */,
 				9BCDC22D51311EC636561360 /* Pods_Hows_ing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		324365282AD2DE8200F92DE5 /* Subscription */ = {
+			isa = PBXGroup;
+			children = (
+				3267CA142AD2EBAE0087A671 /* SelectingConditionView.swift */,
+				32803E412AD2F35200BD99BD /* FontManager.swift */,
+			);
+			path = Subscription;
+			sourceTree = "<group>";
+		};
 		1B2CD7981BDC08B0FE0B30E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,9 +156,11 @@
 		8B2ADE672AD25A3300213F84 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				324365282AD2DE8200F92DE5 /* Subscription */,
 				8BAA99192AD1551A00EF4746 /* Main.storyboard */,
 				8B63B8AF2AD423BA00A680B5 /* SubscriptionByLocation.storyboard */,
 				8BAA991E2AD1551B00EF4746 /* LaunchScreen.storyboard */,
+				32950C972AD2BBF6007D5A4B /* Subscription.storyboard */,
 				48876C732AD2816C007EDAF5 /* realEstate.storyboard */,
 			);
 			path = Storyboard;
@@ -161,6 +188,10 @@
 			children = (
 				48876C762AD28CCB007EDAF5 /* realEstate */,
 				8BAA99172AD1551A00EF4746 /* ViewController.swift */,
+				32803E432AD2F72F00BD99BD /* SelectingConditionViewController.swift */,
+				32803E492AD3DB1400BD99BD /* SelectingLocalConditionVC.swift */,
+				32803E4B2AD3ED8300BD99BD /* LoadingViewController.swift */,
+				32803E4D2AD3EE8300BD99BD /* SubscriptionResultViewController.swift */,
 				8BBC8EDC2AD4F78D00D52F93 /* SubscriptionInfoViewController.swift */,
 			);
 			path = VCS;
@@ -204,6 +235,9 @@
 			dependencies = (
 			);
 			name = "Hows-ing";
+			packageProductDependencies = (
+				32803E472AD2FFCA00BD99BD /* DropDown */,
+			);
 			productName = "Hows-ing";
 			productReference = 48876C792AD29792007EDAF5 /* Hows-ing.app */;
 			productType = "com.apple.product-type.application";
@@ -232,7 +266,10 @@
 				Base,
 			);
 			mainGroup = 8BAA99072AD1551A00EF4746;
-			productRefGroup = 8BAA99072AD1551A00EF4746;
+			packageReferences = (
+				32803E462AD2FFCA00BD99BD /* XCRemoteSwiftPackageReference "DropDown" */,
+			);
+			productRefGroup = 8BAA99112AD1551A00EF4746 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -261,6 +298,7 @@
 				8B2ADE8A2AD25ADC00213F84 /* Pretendard-Bold.otf in Resources */,
 				48876C742AD2816C007EDAF5 /* realEstate.storyboard in Resources */,
 				8BAA991B2AD1551A00EF4746 /* Main.storyboard in Resources */,
+				32950C982AD2BBF6007D5A4B /* Subscription.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,13 +351,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32803E422AD2F35200BD99BD /* FontManager.swift in Sources */,
 				8BAA99182AD1551A00EF4746 /* ViewController.swift in Sources */,
+				32803E4E2AD3EE8300BD99BD /* SubscriptionResultViewController.swift in Sources */,
+				32803E4A2AD3DB1400BD99BD /* SelectingLocalConditionVC.swift in Sources */,
+				32803E4C2AD3ED8300BD99BD /* LoadingViewController.swift in Sources */,
 				8BAA99142AD1551A00EF4746 /* AppDelegate.swift in Sources */,
 				48876C782AD28CE9007EDAF5 /* mapCont.swift in Sources */,
 				8B0FFA892AD5637200CCC5AC /* SubscriptionInfoTableViewCell.swift in Sources */,
 				8BDFD2192AD298730028A43E /* BannerCollectionViewCell.swift in Sources */,
 				8BBC8EDD2AD4F78D00D52F93 /* SubscriptionInfoViewController.swift in Sources */,
 				8BAA99162AD1551A00EF4746 /* SceneDelegate.swift in Sources */,
+				3267CA152AD2EBAE0087A671 /* SelectingConditionView.swift in Sources */,
+				32803E442AD2F72F00BD99BD /* SelectingConditionViewController.swift in Sources */,
 				4865E8F22AD2BA6C00BAB81A /* mapDetailCont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,6 +597,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		32803E462AD2FFCA00BD99BD /* XCRemoteSwiftPackageReference "DropDown" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AssistoLab/DropDown";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		32803E472AD2FFCA00BD99BD /* DropDown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 32803E462AD2FFCA00BD99BD /* XCRemoteSwiftPackageReference "DropDown" */;
+			productName = DropDown;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8BAA99082AD1551A00EF4746 /* Project object */;
 }
