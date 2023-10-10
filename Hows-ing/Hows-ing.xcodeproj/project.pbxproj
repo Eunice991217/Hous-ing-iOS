@@ -23,6 +23,7 @@
 		8BAA991B2AD1551A00EF4746 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BAA99192AD1551A00EF4746 /* Main.storyboard */; };
 		8BAA991D2AD1551B00EF4746 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BAA991C2AD1551B00EF4746 /* Assets.xcassets */; };
 		8BAA99202AD1551B00EF4746 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BAA991E2AD1551B00EF4746 /* LaunchScreen.storyboard */; };
+		8BBC8EDD2AD4F78D00D52F93 /* SubscriptionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBC8EDC2AD4F78D00D52F93 /* SubscriptionInfoViewController.swift */; };
 		8BDFD2172AD283F70028A43E /* neurimboGothic-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8BDFD2162AD283F70028A43E /* neurimboGothic-Regular.otf */; };
 		8BDFD2192AD298730028A43E /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDFD2182AD298730028A43E /* BannerCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		8BAA991C2AD1551B00EF4746 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BAA991F2AD1551B00EF4746 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BAA99212AD1551B00EF4746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BBC8EDC2AD4F78D00D52F93 /* SubscriptionInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionInfoViewController.swift; sourceTree = "<group>"; };
 		8BDFD2162AD283F70028A43E /* neurimboGothic-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "neurimboGothic-Regular.otf"; sourceTree = "<group>"; };
 		8BDFD2182AD298730028A43E /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				8BAA99172AD1551A00EF4746 /* ViewController.swift */,
+				8BBC8EDC2AD4F78D00D52F93 /* SubscriptionInfoViewController.swift */,
 			);
 			path = VCS;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				8BAA99182AD1551A00EF4746 /* ViewController.swift in Sources */,
 				8BAA99142AD1551A00EF4746 /* AppDelegate.swift in Sources */,
 				8BDFD2192AD298730028A43E /* BannerCollectionViewCell.swift in Sources */,
+				8BBC8EDD2AD4F78D00D52F93 /* SubscriptionInfoViewController.swift in Sources */,
 				8BAA99162AD1551A00EF4746 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

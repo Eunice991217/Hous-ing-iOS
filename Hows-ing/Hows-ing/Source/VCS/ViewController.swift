@@ -33,6 +33,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         Banner.dataSource = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
     func UIInit(){
         Banner.layer.cornerRadius = 10
         
