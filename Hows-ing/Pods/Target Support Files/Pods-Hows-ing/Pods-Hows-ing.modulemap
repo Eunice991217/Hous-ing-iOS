@@ -1,0 +1,6 @@
+framework module Pods_Hows_ing {
+  umbrella header "Pods-Hows-ing-umbrella.h"
+
+  export *
+  module * { export * }
+}
