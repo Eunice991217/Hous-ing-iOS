@@ -178,7 +178,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="본인을 포함한 수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKy-tk-4FS">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="본인을 제외한 수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKy-tk-4FS">
                                                 <rect key="frame" x="118" y="380" width="72" height="13"/>
                                                 <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="11"/>
                                                 <color key="textColor" name="Blue"/>
@@ -501,41 +501,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufi-mY-bu9">
-                                <rect key="frame" x="200" y="207" width="154" height="48"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마포구" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DJ-2U-Cbg">
-                                        <rect key="frame" x="17" y="15" width="39" height="18"/>
-                                        <fontDescription key="fontDescription" name="Pretendard-Medium" family="Pretendard" pointSize="15"/>
-                                        <color key="textColor" name="disabledBtnColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5G-6b-LkQ">
-                                        <rect key="frame" x="116" y="12" width="24" height="24"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="hwO-xF-MM3"/>
-                                            <constraint firstAttribute="width" constant="24" id="rmn-fA-JhZ"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="down" title="">
-                                            <color key="baseForegroundColor" name="disabledBtnColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="districtBtnDidTap:" destination="E0t-HL-7Ni" eventType="touchUpInside" id="2sc-L7-KNM"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="h5G-6b-LkQ" secondAttribute="trailing" constant="14" id="7GZ-0y-TMj"/>
-                                    <constraint firstItem="9DJ-2U-Cbg" firstAttribute="leading" secondItem="ufi-mY-bu9" secondAttribute="leading" constant="17" id="CdW-jo-whe"/>
-                                    <constraint firstItem="h5G-6b-LkQ" firstAttribute="centerY" secondItem="ufi-mY-bu9" secondAttribute="centerY" id="YyM-bH-E1f"/>
-                                    <constraint firstAttribute="height" constant="48" id="ani-ET-41l"/>
-                                    <constraint firstItem="9DJ-2U-Cbg" firstAttribute="centerY" secondItem="ufi-mY-bu9" secondAttribute="centerY" id="j0z-Xv-GeM"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B7H-9H-3HM">
-                                <rect key="frame" x="35" y="207" width="154" height="48"/>
+                                <rect key="frame" x="35" y="207" width="320" height="48"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울특별시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Npv-E3-4eF">
                                         <rect key="frame" x="17" y="15" width="65" height="18"/>
@@ -544,7 +511,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jse-PM-Czf">
-                                        <rect key="frame" x="116" y="12" width="24" height="24"/>
+                                        <rect key="frame" x="282" y="12" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="HR0-BH-2oX"/>
                                             <constraint firstAttribute="height" constant="24" id="adI-9c-FE4"/>
@@ -623,7 +590,6 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="VeS-fE-Ver" secondAttribute="trailing" constant="30" id="1sS-2n-BjA"/>
                             <constraint firstItem="B7H-9H-3HM" firstAttribute="top" secondItem="flc-dJ-Nps" secondAttribute="bottom" constant="22" id="66i-aV-1jp"/>
-                            <constraint firstItem="ufi-mY-bu9" firstAttribute="trailing" secondItem="Hn3-Uf-VTo" secondAttribute="trailing" constant="-36" id="6p2-v5-cRW"/>
                             <constraint firstItem="3pu-LH-SmQ" firstAttribute="top" secondItem="B7H-9H-3HM" secondAttribute="bottom" constant="40" id="72d-OC-gmD"/>
                             <constraint firstItem="Hn3-Uf-VTo" firstAttribute="trailing" secondItem="eCQ-BJ-sm9" secondAttribute="trailing" constant="35" id="7x4-Jw-hfY"/>
                             <constraint firstItem="Hn3-Uf-VTo" firstAttribute="bottom" secondItem="VeS-fE-Ver" secondAttribute="bottom" constant="30" id="9CT-8A-odK"/>
@@ -631,12 +597,10 @@
                             <constraint firstItem="eCQ-BJ-sm9" firstAttribute="top" secondItem="3pu-LH-SmQ" secondAttribute="bottom" constant="22" id="HDC-XQ-2Qo"/>
                             <constraint firstItem="IkH-EX-1r1" firstAttribute="top" secondItem="Hn3-Uf-VTo" secondAttribute="top" id="HRN-yL-lxP"/>
                             <constraint firstItem="B7H-9H-3HM" firstAttribute="leading" secondItem="Hn3-Uf-VTo" secondAttribute="leading" constant="35" id="Pe7-cb-DdC"/>
-                            <constraint firstItem="ufi-mY-bu9" firstAttribute="width" secondItem="B7H-9H-3HM" secondAttribute="width" id="SYq-UT-8gP"/>
                             <constraint firstItem="flc-dJ-Nps" firstAttribute="top" secondItem="IkH-EX-1r1" secondAttribute="bottom" constant="40" id="V9A-nh-Jyw"/>
                             <constraint firstItem="3pu-LH-SmQ" firstAttribute="leading" secondItem="Hn3-Uf-VTo" secondAttribute="leading" constant="38" id="X5Y-7h-C28"/>
+                            <constraint firstItem="Hn3-Uf-VTo" firstAttribute="trailing" secondItem="B7H-9H-3HM" secondAttribute="trailing" constant="35" id="YBV-Bs-sMo"/>
                             <constraint firstItem="VeS-fE-Ver" firstAttribute="leading" secondItem="Hn3-Uf-VTo" secondAttribute="leading" constant="30" id="gea-Ed-uBI"/>
-                            <constraint firstItem="ufi-mY-bu9" firstAttribute="centerY" secondItem="B7H-9H-3HM" secondAttribute="centerY" id="j2M-3Q-KDj"/>
-                            <constraint firstItem="ufi-mY-bu9" firstAttribute="leading" secondItem="B7H-9H-3HM" secondAttribute="trailing" constant="11" id="qeG-YR-AoL"/>
                             <constraint firstItem="flc-dJ-Nps" firstAttribute="leading" secondItem="Hn3-Uf-VTo" secondAttribute="leading" constant="38" id="sPE-pr-ZUX"/>
                             <constraint firstItem="eCQ-BJ-sm9" firstAttribute="leading" secondItem="Hn3-Uf-VTo" secondAttribute="leading" constant="35" id="tPU-En-5u9"/>
                         </constraints>
@@ -646,9 +610,6 @@
                         <outlet property="cityDropBtn" destination="Jse-PM-Czf" id="fxd-Ph-Ptp"/>
                         <outlet property="cityDropView" destination="B7H-9H-3HM" id="NmG-eP-sg4"/>
                         <outlet property="cityLabel" destination="Npv-E3-4eF" id="k6y-kw-aZ0"/>
-                        <outlet property="districtDropBtn" destination="h5G-6b-LkQ" id="eEO-zy-A2o"/>
-                        <outlet property="districtDropView" destination="ufi-mY-bu9" id="hUD-Es-XQ7"/>
-                        <outlet property="districtLabel" destination="9DJ-2U-Cbg" id="eps-Av-JtP"/>
                         <outlet property="squareFeetDropBtn" destination="ZIP-DD-auq" id="QjO-9B-zwg"/>
                         <outlet property="squareFeetDropView" destination="eCQ-BJ-sm9" id="AZR-nH-UMJ"/>
                         <outlet property="squareFeetLabel" destination="UAf-mp-n15" id="0Tr-ov-sV4"/>
@@ -731,7 +692,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당신의 신청을 기다리고 있어요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJw-aC-Re3">
-                                <rect key="frame" x="25" y="87" width="299" height="30"/>
+                                <rect key="frame" x="25" y="87" width="298.33333333333331" height="30"/>
                                 <fontDescription key="fontDescription" name="Pretendard-Bold" family="Pretendard" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -743,7 +704,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="청약 당첨 확률" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSE-Ry-i56">
-                                <rect key="frame" x="36" y="407" width="91" height="20"/>
+                                <rect key="frame" x="36.000000000000007" y="407" width="90.666666666666686" height="18.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -781,7 +742,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyM-ME-JNy">
-                                <rect key="frame" x="36" y="451" width="318" height="44"/>
+                                <rect key="frame" x="36" y="449.66666666666669" width="318" height="44"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="보통" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYR-Ng-Xx2">
                                         <rect key="frame" x="0.0" y="0.0" width="105" height="44"/>
