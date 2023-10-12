@@ -9,22 +9,22 @@ import UIKit
 import SafariServices
 
 class SubscriptionInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var LocationBanner: UICollectionView!
     @IBOutlet weak var SubscriptionInfoTableView: UITableView!
-    @IBOutlet weak var bannerLeftLayout: NSLayoutConstraint!
     var selectedLocation:[String] = []
     var subscriptionData:[Datum] = []
     var isAvailable: Bool = false
     var page: Int = 1
     
     @IBAction func locationSelect(_ sender: Any) {
-        
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SelectLocation") as? SelectLocationViewController else {
+            return
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func dataUpdate(){
         let queryURL = "https://api.odcloud.kr/api/ApplyhomeInfoDetailSvc/v1/getAPTLttotPblancDetail?page=" + String(page) + "&perPage=10&returnType=JSON&serviceKey=" + GetKey(key: "locationKey")
         
-        print(queryURL)
         let url = URL(string: queryURL)
         var request = URLRequest(url: url!)
         request.httpMethod = "GET"
@@ -51,10 +51,6 @@ class SubscriptionInfoViewController: UIViewController, UITableViewDelegate, UIT
         }.resume()
         
         return
-    }
-    
-    func showSelectButton(){
-        bannerLeftLayout.constant = selectedLocation.count != 0 ? 6 : 86
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -93,7 +89,6 @@ class SubscriptionInfoViewController: UIViewController, UITableViewDelegate, UIT
         super.viewDidLoad()
         
         dataUpdate()
-        showSelectButton()
         SubscriptionInfoTableView.delegate = self
         SubscriptionInfoTableView.dataSource = self
     }

@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -134,28 +135,80 @@
             </objects>
             <point key="canvasLocation" x="96.946564885496173" y="3.5211267605633805"/>
         </scene>
-        <!--Select Location View Controller-->
+        <!--지역-->
         <scene sceneID="3yh-xm-Y8q">
             <objects>
-                <viewController storyboardIdentifier="SelectLocation" id="iEU-4m-7sW" customClass="SelectLocationViewController" customModule="Hows_ing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectLocation" title="지역" id="iEU-4m-7sW" customClass="SelectLocationViewController" customModule="Hows_ing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sf6-n9-pdH">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Brq-yW-nC5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Brq-yW-nC5">
                                 <rect key="frame" x="30" y="735" width="333" height="54"/>
+                                <color key="backgroundColor" name="HousingBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="lcr-Bi-cSr"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <fontDescription key="fontDescription" name="Pretendard-Bold" family="Pretendard" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="선택 완료"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지역" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjg-Qp-2GR">
+                                <rect key="frame" x="25" y="81" width="28" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="f2F-be-46i"/>
+                                    <constraint firstAttribute="height" constant="23" id="zD2-HL-E76"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aqN-02-i3T" userLabel="Line">
+                                <rect key="frame" x="0.0" y="123" width="393" height="1"/>
+                                <color key="backgroundColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="hYl-Gc-uD7"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0E-Hi-3U0">
+                                <rect key="frame" x="67" y="73" width="72" height="35"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.81960784310000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="FRm-AF-JLX"/>
+                                    <constraint firstAttribute="height" constant="35" id="wo1-2T-l78"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="선택">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="17.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="locationSelect:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cuF-4q-IE0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5gn-yG-ggL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="C0E-Hi-3U0" firstAttribute="leading" secondItem="hjg-Qp-2GR" secondAttribute="trailing" constant="14" id="2A8-Kx-2hr"/>
                             <constraint firstItem="5gn-yG-ggL" firstAttribute="trailing" secondItem="Brq-yW-nC5" secondAttribute="trailing" constant="30" id="5bR-wU-Ziz"/>
+                            <constraint firstAttribute="trailing" secondItem="aqN-02-i3T" secondAttribute="trailing" id="BI5-Mi-w7L"/>
                             <constraint firstItem="Brq-yW-nC5" firstAttribute="leading" secondItem="5gn-yG-ggL" secondAttribute="leading" constant="30" id="Fa6-yr-ld5"/>
+                            <constraint firstItem="C0E-Hi-3U0" firstAttribute="top" secondItem="5gn-yG-ggL" secondAttribute="top" constant="14" id="Fij-SP-hum"/>
+                            <constraint firstItem="aqN-02-i3T" firstAttribute="leading" secondItem="Sf6-n9-pdH" secondAttribute="leading" id="MRf-9X-wPJ"/>
+                            <constraint firstItem="aqN-02-i3T" firstAttribute="top" secondItem="C0E-Hi-3U0" secondAttribute="bottom" constant="15" id="R5Y-BY-SEG"/>
+                            <constraint firstItem="hjg-Qp-2GR" firstAttribute="top" secondItem="5gn-yG-ggL" secondAttribute="top" constant="22" id="VwK-6z-OWl"/>
+                            <constraint firstItem="hjg-Qp-2GR" firstAttribute="leading" secondItem="Sf6-n9-pdH" secondAttribute="leading" constant="25" id="hcl-Sh-Xci"/>
                             <constraint firstItem="5gn-yG-ggL" firstAttribute="bottom" secondItem="Brq-yW-nC5" secondAttribute="bottom" constant="29" id="sKB-dk-d4m"/>
                         </constraints>
                     </view>
@@ -166,6 +219,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="HousingBlue">
+            <color red="0.24705882352941178" green="0.50980392156862742" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
