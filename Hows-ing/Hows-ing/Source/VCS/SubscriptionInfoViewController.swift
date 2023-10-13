@@ -10,22 +10,51 @@ import SafariServices
 
 class SubscriptionInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var SubscriptionInfoTableView: UITableView!
+    @IBOutlet weak var selectedLocationView: UIView!
+    @IBOutlet weak var locationText: UILabel!
     var selectedLocation:[String] = []
     var subscriptionData:[Datum] = []
     var isAvailable: Bool = false
     var page: Int = 1
     var ind: Int = -1
+    var locationName: [String] = ["서울", "강원", "대전", "충남","세종", "충북", "인천","경기", "광주", "전남", "전북", "부산", "제주", "대구", "경북"]
     
     @IBAction func locationSelect(_ sender: Any) {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SelectLocation") as? SelectLocationViewController else {
             return
         }
+        
+        vc.infoVC = self
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func dataUpdate(){
-        let queryURL = "https://api.odcloud.kr/api/ApplyhomeInfoDetailSvc/v1/getAPTLttotPblancDetail?page=" + String(page) + "&perPage=10&returnType=JSON&serviceKey=" + GetKey(key: "locationKey")
+    @IBAction func resetLocation(_ sender: Any) {
+        ind = -1
+        selectedLocationView.alpha = 0
+        page = 1
+        subscriptionData = []
+        dataUpdate()
+    }
+    
+    func locationSelected(){
+        if ind == -1{
+            return
+        }
         
+        locationText.text = locationName[ind]
+        selectedLocationView.alpha = 1
+        page = 1
+        subscriptionData = []
+        dataUpdate()
+    }
+    
+    func dataUpdate(){
+        var queryURL = "https://api.odcloud.kr/api/ApplyhomeInfoDetailSvc/v1/getAPTLttotPblancDetail?page=" + String(page) + "&perPage=10&returnType=JSON&serviceKey=" + GetKey(key: "locationKey")
+        if ind != -1{
+            queryURL += "&cond%5BSUBSCRPT_AREA_CODE_NM%3A%3AEQ%5D=" + locationName[ind].addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        }
+        
+        print(queryURL)
         let url = URL(string: queryURL)
         var request = URLRequest(url: url!)
         request.httpMethod = "GET"
@@ -89,6 +118,7 @@ class SubscriptionInfoViewController: UIViewController, UITableViewDelegate, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        selectedLocationView.alpha = 0
         dataUpdate()
         SubscriptionInfoTableView.delegate = self
         SubscriptionInfoTableView.dataSource = self
@@ -99,7 +129,6 @@ class SubscriptionInfoViewController: UIViewController, UITableViewDelegate, UIT
         self.navigationController?.navigationBar.isHidden = false
         
         let backButtonAppearance = UIBarButtonItemAppearance()
-           // backButton하단에 표출되는 text를 안보이게 설정
         backButtonAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.clear, .font: UIFont.systemFont(ofSize: 0.0)]
         
         let appearance = UINavigationBarAppearance()
@@ -109,13 +138,14 @@ class SubscriptionInfoViewController: UIViewController, UITableViewDelegate, UIT
         self.navigationController?.navigationBar.standardAppearance = appearance
         self.navigationController?.navigationBar.compactAppearance = appearance
         self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
-
+        
+        locationSelected()
     }
 }
 
 func GetKey(key: String)->String{
     guard let ret = Bundle.main.object(forInfoDictionaryKey: key) as? String else{
-        return ""
+        return "MXaOLldc%2FcMikgWupHZWPyG4%2FECMwzEmocS7g7ueaD5WVp4OaLu1ez8o0KaB4jayNdPppHfoPFuPgt%2B8qUjIuA%3D%3D"
     }
     return ret
 }

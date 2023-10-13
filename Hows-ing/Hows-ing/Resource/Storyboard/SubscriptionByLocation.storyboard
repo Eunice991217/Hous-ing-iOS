@@ -110,6 +110,53 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0B6-Cq-bqh">
+                                <rect key="frame" x="67" y="73" width="78" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSB-c9-9tJ">
+                                        <rect key="frame" x="6" y="6" width="48" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="48" id="SpA-qD-zVY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Xmark" translatesAutoresizingMaskIntoConstraints="NO" id="lqd-1b-TAT">
+                                        <rect key="frame" x="54" y="12" width="12" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="MCU-if-V08"/>
+                                            <constraint firstAttribute="width" constant="12" id="uh2-Tj-LsR"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65S-sI-pW6">
+                                        <rect key="frame" x="0.0" y="0.0" width="78" height="36"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="resetLocation:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bsg-cv-AUu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="HousingBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="3hx-h0-sbn"/>
+                                    <constraint firstItem="VSB-c9-9tJ" firstAttribute="leading" secondItem="0B6-Cq-bqh" secondAttribute="leading" constant="6" id="A8E-kc-qcx"/>
+                                    <constraint firstAttribute="trailing" secondItem="lqd-1b-TAT" secondAttribute="trailing" constant="12" id="JuI-Ox-f5c"/>
+                                    <constraint firstItem="VSB-c9-9tJ" firstAttribute="top" secondItem="0B6-Cq-bqh" secondAttribute="top" constant="6" id="QWf-dg-XqX"/>
+                                    <constraint firstItem="65S-sI-pW6" firstAttribute="top" secondItem="0B6-Cq-bqh" secondAttribute="top" id="U4v-Cy-Vdv"/>
+                                    <constraint firstAttribute="bottom" secondItem="65S-sI-pW6" secondAttribute="bottom" id="Y7c-kM-4KX"/>
+                                    <constraint firstAttribute="trailing" secondItem="65S-sI-pW6" secondAttribute="trailing" id="YSb-39-JD5"/>
+                                    <constraint firstAttribute="bottom" secondItem="VSB-c9-9tJ" secondAttribute="bottom" constant="6" id="fqK-og-RuQ"/>
+                                    <constraint firstItem="lqd-1b-TAT" firstAttribute="centerY" secondItem="0B6-Cq-bqh" secondAttribute="centerY" id="rET-Zf-bwQ"/>
+                                    <constraint firstItem="65S-sI-pW6" firstAttribute="leading" secondItem="0B6-Cq-bqh" secondAttribute="leading" id="rHb-zM-2TR"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -117,18 +164,23 @@
                             <constraint firstAttribute="trailing" secondItem="yOx-11-8fz" secondAttribute="trailing" id="1P0-Nq-rCr"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="VWE-Tv-l58" secondAttribute="trailing" id="213-eu-weV"/>
                             <constraint firstItem="yOx-11-8fz" firstAttribute="top" secondItem="rHn-6D-Z6W" secondAttribute="bottom" constant="15" id="Acy-8g-Jeq"/>
+                            <constraint firstItem="yOx-11-8fz" firstAttribute="top" secondItem="0B6-Cq-bqh" secondAttribute="bottom" constant="14" id="Ejc-Id-GvJ"/>
                             <constraint firstItem="rHn-6D-Z6W" firstAttribute="leading" secondItem="je8-es-oqT" secondAttribute="trailing" constant="14" id="HBO-jC-54D"/>
+                            <constraint firstItem="0B6-Cq-bqh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="14" id="NDk-KP-tJ0"/>
                             <constraint firstAttribute="bottom" secondItem="VWE-Tv-l58" secondAttribute="bottom" id="OnQ-7f-RME"/>
                             <constraint firstItem="rHn-6D-Z6W" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="14" id="UNN-gd-Gfh"/>
                             <constraint firstItem="je8-es-oqT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="Xhi-mh-XWr"/>
                             <constraint firstItem="je8-es-oqT" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="22" id="XsY-Zd-u4I"/>
                             <constraint firstItem="VWE-Tv-l58" firstAttribute="top" secondItem="yOx-11-8fz" secondAttribute="bottom" id="Zcv-Dv-abc"/>
                             <constraint firstItem="yOx-11-8fz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ftw-7u-YqM"/>
+                            <constraint firstItem="0B6-Cq-bqh" firstAttribute="leading" secondItem="je8-es-oqT" secondAttribute="trailing" constant="14" id="m4H-RK-J40"/>
                             <constraint firstItem="VWE-Tv-l58" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="oGS-Uz-8kX"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="SubscriptionInfoTableView" destination="VWE-Tv-l58" id="NIy-Lv-YTw"/>
+                        <outlet property="locationText" destination="VSB-c9-9tJ" id="GjV-96-07y"/>
+                        <outlet property="selectedLocationView" destination="0B6-Cq-bqh" id="FGE-c6-FUc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
