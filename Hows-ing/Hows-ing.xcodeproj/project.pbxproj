@@ -190,8 +190,8 @@
 				32803E492AD3DB1400BD99BD /* SelectingLocalConditionVC.swift */,
 				32803E4B2AD3ED8300BD99BD /* LoadingViewController.swift */,
 				32803E4D2AD3EE8300BD99BD /* SubscriptionResultViewController.swift */,
-				8BEA5FAE2AD7C1B2007231DE /* SelectLocationViewController.swift */,
 				8BBC8EDC2AD4F78D00D52F93 /* SubscriptionInfoViewController.swift */,
+				8BEA5FAE2AD7C1B2007231DE /* SelectLocationViewController.swift */,
 			);
 			path = VCS;
 			sourceTree = "<group>";

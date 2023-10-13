@@ -143,6 +143,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynN-rD-11r">
+                                <rect key="frame" x="30" y="735" width="333" height="54"/>
+                                <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="0.51000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="aWJ-0p-2Va"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Pretendard-Bold" family="Pretendard" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="선택 완료">
+                                    <color key="titleColor" red="0.61176470588235299" green="0.61176470588235299" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="selectButtonTap:" destination="iEU-4m-7sW" eventType="touchUpInside" id="oGs-Gt-H3v"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Brq-yW-nC5">
                                 <rect key="frame" x="30" y="735" width="333" height="54"/>
                                 <color key="backgroundColor" name="HousingBlue"/>
@@ -157,6 +177,9 @@
                                         <integer key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="selectButtonTap:" destination="iEU-4m-7sW" eventType="touchUpInside" id="L0K-Ys-n1p"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지역" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjg-Qp-2GR">
                                 <rect key="frame" x="25" y="81" width="28" height="23"/>
@@ -175,32 +198,12 @@
                                     <constraint firstAttribute="height" constant="1" id="hYl-Gc-uD7"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0E-Hi-3U0">
-                                <rect key="frame" x="67" y="73" width="72" height="35"/>
-                                <color key="backgroundColor" red="0.81960784310000001" green="0.81960784310000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="72" id="FRm-AF-JLX"/>
-                                    <constraint firstAttribute="height" constant="35" id="wo1-2T-l78"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="16"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="선택">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <real key="value" value="17.5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="locationSelect:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cuF-4q-IE0"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dND-1f-QSz">
                                 <rect key="frame" x="112" y="224.66666666666663" width="169" height="428"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uvw-NJ-D7x">
                                         <rect key="frame" x="0.0" y="0.0" width="57" height="36"/>
+                                        <color key="backgroundColor" name="HousingBlue"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="57" id="3d8-15-8Su"/>
                                             <constraint firstAttribute="height" constant="36" id="D6g-4e-Npk"/>
@@ -208,16 +211,17 @@
                                         <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="서울">
-                                            <color key="titleColor" red="0.62745098039215685" green="0.65490196078431373" blue="0.6705882352941176" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
+                                                <integer key="value" value="18"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVS-5H-Qwo">
                                         <rect key="frame" x="112" y="0.0" width="57" height="36"/>
+                                        <color key="backgroundColor" name="HousingBlue"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="57" id="Prh-2E-KFN"/>
                                             <constraint firstAttribute="height" constant="36" id="cX8-hL-alo"/>
@@ -225,16 +229,17 @@
                                         <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="경기">
-                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
+                                                <integer key="value" value="18"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGN-4F-ArC">
                                         <rect key="frame" x="0.0" y="56.000000000000028" width="57" height="36"/>
+                                        <color key="backgroundColor" name="HousingBlue"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="60V-pr-LXl"/>
                                             <constraint firstAttribute="width" constant="57" id="859-N0-6hN"/>
@@ -242,16 +247,17 @@
                                         <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="인천">
-                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
+                                                <integer key="value" value="18"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZW-UF-bh1">
                                         <rect key="frame" x="0.0" y="112.00000000000003" width="57" height="36"/>
+                                        <color key="backgroundColor" name="HousingBlue"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="57" id="4eT-cI-HW3"/>
                                             <constraint firstAttribute="height" constant="36" id="EU9-Pp-lPn"/>
@@ -259,16 +265,17 @@
                                         <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="대전">
-                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
+                                                <integer key="value" value="18"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NT0-Bq-78F">
                                         <rect key="frame" x="0.0" y="168.00000000000003" width="57" height="36"/>
+                                        <color key="backgroundColor" name="HousingBlue"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="hBt-Jd-0WV"/>
                                             <constraint firstAttribute="width" constant="57" id="tSw-LB-sGH"/>
@@ -276,16 +283,17 @@
                                         <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="전남">
-                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
+                                                <integer key="value" value="18"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qD-oh-1R9">
                                         <rect key="frame" x="0.0" y="224.00000000000003" width="57" height="35.999999999999972"/>
+                                        <color key="backgroundColor" name="HousingBlue"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="R6E-cd-Elu"/>
                                             <constraint firstAttribute="width" constant="57" id="ebK-fX-VlI"/>
@@ -293,16 +301,17 @@
                                         <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="충남">
-                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
+                                                <integer key="value" value="18"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zh9-XP-puv">
                                         <rect key="frame" x="0.0" y="280" width="57" height="36"/>
+                                        <color key="backgroundColor" name="HousingBlue"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="57" id="H0j-5e-Gfq"/>
                                             <constraint firstAttribute="height" constant="36" id="XnF-85-VTB"/>
@@ -310,16 +319,17 @@
                                         <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="광주">
-                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
+                                                <integer key="value" value="18"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mc-jk-QYM">
                                         <rect key="frame" x="0.0" y="336" width="57" height="36"/>
+                                        <color key="backgroundColor" name="HousingBlue"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="57" id="fbv-nP-9ee"/>
                                             <constraint firstAttribute="height" constant="36" id="frr-WM-Hoa"/>
@@ -327,16 +337,17 @@
                                         <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="대구">
-                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
+                                                <integer key="value" value="18"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksh-YZ-gDu">
                                         <rect key="frame" x="112" y="56.000000000000028" width="57" height="36"/>
+                                        <color key="backgroundColor" name="HousingBlue"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="FYp-iO-WC9"/>
                                             <constraint firstAttribute="width" constant="57" id="KaS-z7-uoG"/>
@@ -344,16 +355,17 @@
                                         <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="강원">
-                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
+                                                <integer key="value" value="18"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESV-Ms-xEC">
                                         <rect key="frame" x="112" y="112.00000000000003" width="57" height="36"/>
+                                        <color key="backgroundColor" name="HousingBlue"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="57" id="HsD-tS-TiD"/>
                                             <constraint firstAttribute="height" constant="36" id="cxR-dH-dj4"/>
@@ -361,16 +373,17 @@
                                         <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="세종">
-                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
+                                                <integer key="value" value="18"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7V-zo-w4D">
                                         <rect key="frame" x="112" y="168.00000000000003" width="57" height="36"/>
+                                        <color key="backgroundColor" name="HousingBlue"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="57" id="W5q-Qk-U4o"/>
                                             <constraint firstAttribute="height" constant="36" id="WRU-Rf-69d"/>
@@ -378,16 +391,17 @@
                                         <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="전북">
-                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
+                                                <integer key="value" value="18"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sre-TL-MSe">
                                         <rect key="frame" x="112" y="224.00000000000003" width="57" height="35.999999999999972"/>
+                                        <color key="backgroundColor" name="HousingBlue"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="57" id="EQ0-pA-243"/>
                                             <constraint firstAttribute="height" constant="36" id="RI3-f2-6ao"/>
@@ -395,16 +409,17 @@
                                         <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="충북">
-                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
+                                                <integer key="value" value="18"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFt-g5-TmY">
                                         <rect key="frame" x="112" y="280" width="57" height="36"/>
+                                        <color key="backgroundColor" name="HousingBlue"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="IgK-FQ-FV2"/>
                                             <constraint firstAttribute="width" constant="57" id="J4T-0U-5e7"/>
@@ -412,16 +427,17 @@
                                         <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="경북">
-                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
+                                                <integer key="value" value="18"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXF-o1-HXL">
                                         <rect key="frame" x="112" y="336" width="57" height="36"/>
+                                        <color key="backgroundColor" name="HousingBlue"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="2FS-m1-T6w"/>
                                             <constraint firstAttribute="width" constant="57" id="7gO-Nn-VIF"/>
@@ -429,16 +445,17 @@
                                         <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="부산">
-                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
+                                                <integer key="value" value="18"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUI-hF-dr4">
                                         <rect key="frame" x="56" y="392" width="57" height="36"/>
+                                        <color key="backgroundColor" name="HousingBlue"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="j4W-13-rJv"/>
                                             <constraint firstAttribute="width" constant="57" id="rTA-M9-ffl"/>
@@ -446,11 +463,11 @@
                                         <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="제주">
-                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
+                                                <integer key="value" value="18"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
@@ -490,31 +507,387 @@
                                     <constraint firstAttribute="height" constant="428" id="zOz-tw-1AH"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L3u-04-u4z">
+                                <rect key="frame" x="67" y="73" width="78" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DY4-lY-3ZQ">
+                                        <rect key="frame" x="6" y="6" width="60" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="ZZn-xH-C43"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Xmark" translatesAutoresizingMaskIntoConstraints="NO" id="JId-AF-R41">
+                                        <rect key="frame" x="54" y="12" width="12" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="12" id="GFs-hm-Fcj"/>
+                                            <constraint firstAttribute="height" constant="12" id="V4W-BX-of6"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XU1-NK-lC1">
+                                        <rect key="frame" x="0.0" y="0.0" width="78" height="36"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="deleteButtonTap:" destination="iEU-4m-7sW" eventType="touchUpInside" id="DhY-2n-a8S"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.81960784313725488" green="0.81960784313725488" blue="0.81960784313725488" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="XU1-NK-lC1" firstAttribute="leading" secondItem="L3u-04-u4z" secondAttribute="leading" id="25H-PG-pbJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="JId-AF-R41" secondAttribute="trailing" constant="12" id="QVw-xd-l8f"/>
+                                    <constraint firstItem="DY4-lY-3ZQ" firstAttribute="leading" secondItem="L3u-04-u4z" secondAttribute="leading" constant="6" id="aKt-KS-MZX"/>
+                                    <constraint firstItem="DY4-lY-3ZQ" firstAttribute="top" secondItem="L3u-04-u4z" secondAttribute="top" constant="6" id="cUU-ur-HRq"/>
+                                    <constraint firstItem="JId-AF-R41" firstAttribute="centerY" secondItem="L3u-04-u4z" secondAttribute="centerY" id="h9V-d0-E23"/>
+                                    <constraint firstAttribute="bottom" secondItem="DY4-lY-3ZQ" secondAttribute="bottom" constant="6" id="if4-tP-8XH"/>
+                                    <constraint firstAttribute="trailing" secondItem="XU1-NK-lC1" secondAttribute="trailing" id="jhb-ny-Gtm"/>
+                                    <constraint firstAttribute="bottom" secondItem="XU1-NK-lC1" secondAttribute="bottom" id="nou-4B-Pbe"/>
+                                    <constraint firstItem="XU1-NK-lC1" firstAttribute="top" secondItem="L3u-04-u4z" secondAttribute="top" id="tSI-BX-wId"/>
+                                    <constraint firstAttribute="width" constant="78" id="v02-hA-dYE"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VYF-Wq-gVI">
+                                <rect key="frame" x="112" y="224.66666666666663" width="169" height="428"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeV-Nz-9oP">
+                                        <rect key="frame" x="0.0" y="0.0" width="57" height="36"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="57" id="Oi7-QS-xbF"/>
+                                            <constraint firstAttribute="height" constant="36" id="h5V-j3-LAq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="서울">
+                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectLocationTap:" destination="iEU-4m-7sW" eventType="touchUpInside" id="mIH-hs-RlU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDG-Ha-od3">
+                                        <rect key="frame" x="112" y="0.0" width="57" height="36"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="57" id="Art-B6-Ci5"/>
+                                            <constraint firstAttribute="height" constant="36" id="E0g-5n-Clq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="경기">
+                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectLocationTap:" destination="iEU-4m-7sW" eventType="touchUpInside" id="9qM-c2-xJt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRA-w0-ixj">
+                                        <rect key="frame" x="0.0" y="56.000000000000028" width="57" height="36"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="cha-6D-6b1"/>
+                                            <constraint firstAttribute="width" constant="57" id="sie-U2-57j"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="인천">
+                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectLocationTap:" destination="iEU-4m-7sW" eventType="touchUpInside" id="9vX-ZY-r9x"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOp-t9-RG0">
+                                        <rect key="frame" x="0.0" y="112.00000000000003" width="57" height="36"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="9WQ-my-RDi"/>
+                                            <constraint firstAttribute="width" constant="57" id="YJw-NK-iGZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="대전">
+                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectLocationTap:" destination="iEU-4m-7sW" eventType="touchUpInside" id="2A4-We-hTS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9eX-LQ-mJc">
+                                        <rect key="frame" x="0.0" y="168.00000000000003" width="57" height="36"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="57" id="AVj-2G-kz3"/>
+                                            <constraint firstAttribute="height" constant="36" id="Xzh-Zc-SZY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="전남">
+                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectLocationTap:" destination="iEU-4m-7sW" eventType="touchUpInside" id="5gh-de-9MF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfO-xv-fKy">
+                                        <rect key="frame" x="0.0" y="224.00000000000003" width="57" height="35.999999999999972"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="57" id="6Sc-Ew-fAn"/>
+                                            <constraint firstAttribute="height" constant="36" id="XGc-4Y-7Oa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="충남">
+                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectLocationTap:" destination="iEU-4m-7sW" eventType="touchUpInside" id="Q78-wC-jah"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObE-UJ-eQg">
+                                        <rect key="frame" x="0.0" y="280" width="57" height="36"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="Ntv-7Y-NDR"/>
+                                            <constraint firstAttribute="width" constant="57" id="fkw-S2-jbB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="광주">
+                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectLocationTap:" destination="iEU-4m-7sW" eventType="touchUpInside" id="iMC-Gk-w7y"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXk-Op-L5E">
+                                        <rect key="frame" x="0.0" y="336" width="57" height="36"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="57" id="Ao3-W1-e8P"/>
+                                            <constraint firstAttribute="height" constant="36" id="SNy-xE-FNS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="대구">
+                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectLocationTap:" destination="iEU-4m-7sW" eventType="touchUpInside" id="KtM-11-fwl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOu-2R-3Fb">
+                                        <rect key="frame" x="112" y="56.000000000000028" width="57" height="36"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="57" id="Ah9-qY-V1f"/>
+                                            <constraint firstAttribute="height" constant="36" id="oYr-Ht-x1c"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="강원">
+                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectLocationTap:" destination="iEU-4m-7sW" eventType="touchUpInside" id="DgW-7b-j0A"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgk-xQ-qHr">
+                                        <rect key="frame" x="112" y="112.00000000000003" width="57" height="36"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="uyx-UF-gOZ"/>
+                                            <constraint firstAttribute="width" constant="57" id="xSg-Fk-7ai"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="세종">
+                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectLocationTap:" destination="iEU-4m-7sW" eventType="touchUpInside" id="k1J-vQ-MIk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozu-Fq-J46">
+                                        <rect key="frame" x="112" y="168.00000000000003" width="57" height="36"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="57" id="5bt-Zr-LYK"/>
+                                            <constraint firstAttribute="height" constant="36" id="Okc-nt-gAI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="전북">
+                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectLocationTap:" destination="iEU-4m-7sW" eventType="touchUpInside" id="kMx-Ik-P4u"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coI-tE-2Ui">
+                                        <rect key="frame" x="112" y="224.00000000000003" width="57" height="35.999999999999972"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="57" id="5ra-8L-3lg"/>
+                                            <constraint firstAttribute="height" constant="36" id="Ro9-vE-omC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="충북">
+                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectLocationTap:" destination="iEU-4m-7sW" eventType="touchUpInside" id="ixb-k0-zla"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koe-92-QXS">
+                                        <rect key="frame" x="112" y="280" width="57" height="36"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="57" id="GiH-aU-UJc"/>
+                                            <constraint firstAttribute="height" constant="36" id="ubf-SX-teq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="경북">
+                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectLocationTap:" destination="iEU-4m-7sW" eventType="touchUpInside" id="4Dl-9o-hoR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lu5-fX-i8A">
+                                        <rect key="frame" x="112" y="336" width="57" height="36"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="c5g-Kz-3eZ"/>
+                                            <constraint firstAttribute="width" constant="57" id="d28-fE-VbA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="부산">
+                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectLocationTap:" destination="iEU-4m-7sW" eventType="touchUpInside" id="HOj-ge-yva"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TO2-X5-ofs">
+                                        <rect key="frame" x="56" y="392" width="57" height="36"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="57" id="Dlv-7H-jnu"/>
+                                            <constraint firstAttribute="height" constant="36" id="ZEQ-2q-tUq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="제주">
+                                            <color key="titleColor" red="0.62745098040000002" green="0.65490196079999996" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectLocationTap:" destination="iEU-4m-7sW" eventType="touchUpInside" id="Rcr-En-c32"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="TO2-X5-ofs" firstAttribute="centerX" secondItem="VYF-Wq-gVI" secondAttribute="centerX" id="2QS-1y-UsE"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lu5-fX-i8A" secondAttribute="trailing" id="2zR-5f-D17"/>
+                                    <constraint firstItem="coI-tE-2Ui" firstAttribute="top" secondItem="ozu-Fq-J46" secondAttribute="bottom" constant="20" id="4F5-Yh-iKY"/>
+                                    <constraint firstAttribute="trailing" secondItem="ozu-Fq-J46" secondAttribute="trailing" id="8hT-D2-Fmc"/>
+                                    <constraint firstItem="9eX-LQ-mJc" firstAttribute="leading" secondItem="VYF-Wq-gVI" secondAttribute="leading" id="AqL-xT-Svt"/>
+                                    <constraint firstItem="uOu-2R-3Fb" firstAttribute="top" secondItem="rDG-Ha-od3" secondAttribute="bottom" constant="20" id="E0K-cz-MyJ"/>
+                                    <constraint firstItem="DOp-t9-RG0" firstAttribute="leading" secondItem="VYF-Wq-gVI" secondAttribute="leading" id="E5C-HT-3xl"/>
+                                    <constraint firstItem="DOp-t9-RG0" firstAttribute="top" secondItem="bRA-w0-ixj" secondAttribute="bottom" constant="20" id="H6V-QV-Zc2"/>
+                                    <constraint firstItem="Lu5-fX-i8A" firstAttribute="top" secondItem="koe-92-QXS" secondAttribute="bottom" constant="20" id="H8B-yC-yme"/>
+                                    <constraint firstItem="hXk-Op-L5E" firstAttribute="top" secondItem="ObE-UJ-eQg" secondAttribute="bottom" constant="20" id="IkL-3q-OWe"/>
+                                    <constraint firstItem="cfO-xv-fKy" firstAttribute="top" secondItem="9eX-LQ-mJc" secondAttribute="bottom" constant="20" id="PDu-il-pCG"/>
+                                    <constraint firstItem="rDG-Ha-od3" firstAttribute="top" secondItem="VYF-Wq-gVI" secondAttribute="top" id="PEm-dR-Teb"/>
+                                    <constraint firstAttribute="trailing" secondItem="koe-92-QXS" secondAttribute="trailing" id="Smw-li-ggq"/>
+                                    <constraint firstItem="ObE-UJ-eQg" firstAttribute="top" secondItem="cfO-xv-fKy" secondAttribute="bottom" constant="20" id="VgP-cR-CY7"/>
+                                    <constraint firstAttribute="bottom" secondItem="TO2-X5-ofs" secondAttribute="bottom" id="Z56-gg-wae"/>
+                                    <constraint firstItem="bRA-w0-ixj" firstAttribute="top" secondItem="EeV-Nz-9oP" secondAttribute="bottom" constant="20" id="Zyq-75-yv0"/>
+                                    <constraint firstAttribute="trailing" secondItem="lgk-xQ-qHr" secondAttribute="trailing" id="cEM-zi-5vW"/>
+                                    <constraint firstItem="lgk-xQ-qHr" firstAttribute="top" secondItem="uOu-2R-3Fb" secondAttribute="bottom" constant="20" id="eYn-G9-y1d"/>
+                                    <constraint firstAttribute="width" constant="169" id="eeN-Pr-WOS"/>
+                                    <constraint firstItem="9eX-LQ-mJc" firstAttribute="top" secondItem="DOp-t9-RG0" secondAttribute="bottom" constant="20" id="fhz-Hw-ZX2"/>
+                                    <constraint firstAttribute="trailing" secondItem="uOu-2R-3Fb" secondAttribute="trailing" id="gNj-Ei-2rD"/>
+                                    <constraint firstItem="koe-92-QXS" firstAttribute="top" secondItem="coI-tE-2Ui" secondAttribute="bottom" constant="20" id="hrp-4a-0Kp"/>
+                                    <constraint firstItem="hXk-Op-L5E" firstAttribute="leading" secondItem="VYF-Wq-gVI" secondAttribute="leading" id="ldy-aJ-pdJ"/>
+                                    <constraint firstItem="EeV-Nz-9oP" firstAttribute="top" secondItem="VYF-Wq-gVI" secondAttribute="top" id="nkJ-de-dbf"/>
+                                    <constraint firstItem="ozu-Fq-J46" firstAttribute="top" secondItem="lgk-xQ-qHr" secondAttribute="bottom" constant="20" id="qgy-LF-8hP"/>
+                                    <constraint firstAttribute="trailing" secondItem="coI-tE-2Ui" secondAttribute="trailing" id="r3j-uf-yHC"/>
+                                    <constraint firstItem="ObE-UJ-eQg" firstAttribute="leading" secondItem="VYF-Wq-gVI" secondAttribute="leading" id="sbj-0L-2N7"/>
+                                    <constraint firstItem="EeV-Nz-9oP" firstAttribute="leading" secondItem="VYF-Wq-gVI" secondAttribute="leading" id="ukO-Ay-ZMG"/>
+                                    <constraint firstItem="cfO-xv-fKy" firstAttribute="leading" secondItem="VYF-Wq-gVI" secondAttribute="leading" id="vh4-j1-ydZ"/>
+                                    <constraint firstAttribute="height" constant="428" id="x3l-0o-I0W"/>
+                                    <constraint firstAttribute="trailing" secondItem="rDG-Ha-od3" secondAttribute="trailing" id="xx6-yk-pBE"/>
+                                    <constraint firstItem="bRA-w0-ixj" firstAttribute="leading" secondItem="VYF-Wq-gVI" secondAttribute="leading" id="ydH-Da-TO7"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5gn-yG-ggL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="C0E-Hi-3U0" firstAttribute="leading" secondItem="hjg-Qp-2GR" secondAttribute="trailing" constant="14" id="2A8-Kx-2hr"/>
                             <constraint firstItem="5gn-yG-ggL" firstAttribute="trailing" secondItem="Brq-yW-nC5" secondAttribute="trailing" constant="30" id="5bR-wU-Ziz"/>
                             <constraint firstItem="dND-1f-QSz" firstAttribute="centerY" secondItem="5gn-yG-ggL" secondAttribute="centerY" id="8pf-uY-hTc"/>
+                            <constraint firstItem="L3u-04-u4z" firstAttribute="top" secondItem="5gn-yG-ggL" secondAttribute="top" constant="14" id="9kN-QY-Heg"/>
                             <constraint firstAttribute="trailing" secondItem="aqN-02-i3T" secondAttribute="trailing" id="BI5-Mi-w7L"/>
+                            <constraint firstItem="5gn-yG-ggL" firstAttribute="trailing" secondItem="ynN-rD-11r" secondAttribute="trailing" constant="30" id="EAi-Rq-fIn"/>
                             <constraint firstItem="Brq-yW-nC5" firstAttribute="leading" secondItem="5gn-yG-ggL" secondAttribute="leading" constant="30" id="Fa6-yr-ld5"/>
-                            <constraint firstItem="C0E-Hi-3U0" firstAttribute="top" secondItem="5gn-yG-ggL" secondAttribute="top" constant="14" id="Fij-SP-hum"/>
                             <constraint firstItem="dND-1f-QSz" firstAttribute="centerX" secondItem="5gn-yG-ggL" secondAttribute="centerX" id="Jh5-if-cH4"/>
                             <constraint firstItem="aqN-02-i3T" firstAttribute="leading" secondItem="Sf6-n9-pdH" secondAttribute="leading" id="MRf-9X-wPJ"/>
-                            <constraint firstItem="aqN-02-i3T" firstAttribute="top" secondItem="C0E-Hi-3U0" secondAttribute="bottom" constant="15" id="R5Y-BY-SEG"/>
+                            <constraint firstItem="aqN-02-i3T" firstAttribute="top" secondItem="L3u-04-u4z" secondAttribute="bottom" constant="14" id="PYS-Pb-eWz"/>
+                            <constraint firstItem="VYF-Wq-gVI" firstAttribute="centerY" secondItem="5gn-yG-ggL" secondAttribute="centerY" id="Tcw-Vr-fN2"/>
                             <constraint firstItem="hjg-Qp-2GR" firstAttribute="top" secondItem="5gn-yG-ggL" secondAttribute="top" constant="22" id="VwK-6z-OWl"/>
+                            <constraint firstItem="ynN-rD-11r" firstAttribute="leading" secondItem="5gn-yG-ggL" secondAttribute="leading" constant="30" id="Yu8-ux-EHu"/>
+                            <constraint firstItem="VYF-Wq-gVI" firstAttribute="centerX" secondItem="5gn-yG-ggL" secondAttribute="centerX" id="ZCT-qw-eyP"/>
                             <constraint firstItem="hjg-Qp-2GR" firstAttribute="leading" secondItem="Sf6-n9-pdH" secondAttribute="leading" constant="25" id="hcl-Sh-Xci"/>
+                            <constraint firstItem="5gn-yG-ggL" firstAttribute="bottom" secondItem="ynN-rD-11r" secondAttribute="bottom" constant="29" id="lhG-T9-TqV"/>
+                            <constraint firstItem="aqN-02-i3T" firstAttribute="top" secondItem="hjg-Qp-2GR" secondAttribute="bottom" constant="19" id="oGh-nl-swv"/>
                             <constraint firstItem="5gn-yG-ggL" firstAttribute="bottom" secondItem="Brq-yW-nC5" secondAttribute="bottom" constant="29" id="sKB-dk-d4m"/>
+                            <constraint firstItem="L3u-04-u4z" firstAttribute="leading" secondItem="hjg-Qp-2GR" secondAttribute="trailing" constant="14" id="yoD-f9-ItO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="B100" destination="EeV-Nz-9oP" id="kUs-Ym-Qb8"/>
+                        <outlet property="B200" destination="uOu-2R-3Fb" id="ygg-k9-TdL"/>
+                        <outlet property="B300" destination="DOp-t9-RG0" id="w0a-kr-psW"/>
+                        <outlet property="B312" destination="cfO-xv-fKy" id="mAu-CP-kzx"/>
+                        <outlet property="B338" destination="lgk-xQ-qHr" id="j4g-7C-xx6"/>
+                        <outlet property="B360" destination="coI-tE-2Ui" id="0QK-jd-pTF"/>
+                        <outlet property="B400" destination="bRA-w0-ixj" id="89V-KH-YSt"/>
+                        <outlet property="B410" destination="rDG-Ha-od3" id="06C-cv-RAT"/>
+                        <outlet property="B500" destination="ObE-UJ-eQg" id="NkX-Af-d6Y"/>
+                        <outlet property="B513" destination="9eX-LQ-mJc" id="9WI-WV-zPA"/>
+                        <outlet property="B560" destination="ozu-Fq-J46" id="aZ5-T7-vAs"/>
+                        <outlet property="B600" destination="Lu5-fX-i8A" id="q78-4O-WsP"/>
+                        <outlet property="B690" destination="TO2-X5-ofs" id="MmL-IU-Z6c"/>
+                        <outlet property="B700" destination="hXk-Op-L5E" id="BcC-Hf-wp5"/>
+                        <outlet property="B712" destination="koe-92-QXS" id="qpK-Ji-UkO"/>
+                        <outlet property="XmarkImage" destination="JId-AF-R41" id="O1T-Q0-uiS"/>
+                        <outlet property="locationText" destination="DY4-lY-3ZQ" id="Zpi-gY-RAN"/>
+                        <outlet property="locationView" destination="L3u-04-u4z" id="StP-Qw-Wx5"/>
+                        <outlet property="locationViewWidth" destination="v02-hA-dYE" id="0IO-td-APh"/>
+                        <outlet property="locationWidth" destination="ZZn-xH-C43" id="iux-1N-bC0"/>
+                        <outlet property="selectButton" destination="Brq-yW-nC5" id="nMZ-jn-G5X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jA1-hz-ylH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1016" y="4"/>
+            <point key="canvasLocation" x="1014.5038167938931" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Xmark" width="170.66667175292969" height="185"/>
         <namedColor name="HousingBlue">
             <color red="0.24705882352941178" green="0.50980392156862742" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

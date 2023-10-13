@@ -14,6 +14,7 @@ class SubscriptionInfoViewController: UIViewController, UITableViewDelegate, UIT
     var subscriptionData:[Datum] = []
     var isAvailable: Bool = false
     var page: Int = 1
+    var ind: Int = -1
     
     @IBAction func locationSelect(_ sender: Any) {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SelectLocation") as? SelectLocationViewController else {
