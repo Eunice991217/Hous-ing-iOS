@@ -5,6 +5,23 @@ import Kingfisher
 
 class mapCont: UIViewController, CLLocationManagerDelegate{
     
+    
+    @IBOutlet weak var TabbarView: UIView!
+    @IBOutlet weak var PaperIcon:  UIImageView!
+    @IBOutlet weak var HomeIcon: UIImageView!
+    
+    @IBOutlet weak var paperView: UIView!
+    
+    
+    @IBOutlet weak var homeView: UIView!
+    
+    
+    @IBOutlet weak var PaperText: UILabel!
+    @IBOutlet weak var HomeText: UILabel!
+    
+    let pageLock = NSLock()
+    var tapNum: Int = 1
+    
     var mapDivCode: String?
     var mapIdentiNum: IdentiNum? 
     
@@ -61,8 +78,83 @@ class mapCont: UIViewController, CLLocationManagerDelegate{
     
     @IBOutlet weak var mapView: NMFMapView!
     
+    @objc func handleHomeTap(_ sender: UITapGestureRecognizer) {
+        print("부동산 클릭했을때")
+        
+        if tapNum == 1 {
+            return
+        }
+        self.pageLock.lock()
+        defer { self.pageLock.unlock() }
+        PaperIcon.image = UIImage(named: "PaperIcon")
+        HomeIcon.image = UIImage(named: "HomeSelect")
+        PaperText.textColor = UIColor(named: "HousingGray")
+        HomeText.textColor = UIColor(named: "HousingBlue")
+        tapNum = 1
+    }
+    
+    @objc func handlePaperTap(_ sender: UITapGestureRecognizer) {
+        print("청약 클릭했을때")
+        
+        if tapNum == 0 {
+            return
+        }
+        self.pageLock.lock()
+        defer { self.pageLock.unlock() }
+        PaperIcon.image = UIImage(named: "PaperSelect")
+        HomeIcon.image = UIImage(named: "HomeIcon")
+        PaperText.textColor = UIColor(named: "HousingBlue")
+        HomeText.textColor = UIColor(named: "HousingGray")
+        tapNum = 0
+    }
+    
+    @IBAction func PaperButtonTap(_ sender: Any) {
+        if tapNum == 0 {
+            return
+        }
+        self.pageLock.lock()
+        defer { self.pageLock.unlock() }
+        PaperIcon.image = UIImage(named: "PaperSelect")
+        HomeIcon.image = UIImage(named: "HomeIcon")
+        PaperText.textColor = UIColor(named: "HousingBlue")
+        HomeText.textColor = UIColor(named: "HousingGray")
+        tapNum = 0
+    }
+    
+    @IBAction func HomeButtonTap(_ sender: Any) {
+        if tapNum == 1 {
+            return
+        }
+        self.pageLock.lock()
+        defer { self.pageLock.unlock() }
+        PaperIcon.image = UIImage(named: "PaperIcon")
+        HomeIcon.image = UIImage(named: "HomeSelect")
+        PaperText.textColor = UIColor(named: "HousingGray")
+        HomeText.textColor = UIColor(named: "HousingBlue")
+        tapNum = 1
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 부동산 버튼 클릭했을 때
+        let tapGestureRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(handleHomeTap(_:)))
+
+        // 부동산 클릭 func 추가
+        homeView.addGestureRecognizer(tapGestureRecognizer2)
+        
+        // 청약 버튼 클릭했을 때
+        let tapGestureRecognizer3 = UITapGestureRecognizer(target: self, action: #selector(handlePaperTap(_:)))
+        
+        // 청약 클릭 func 추가
+        paperView.addGestureRecognizer(tapGestureRecognizer3)
+        
+        TabbarView.layer.cornerRadius = 40
+        TabbarView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        TabbarView.layer.shadowOffset = CGSize(width: 0, height: 4)
+        TabbarView.layer.shadowColor = UIColor.black.cgColor
+        TabbarView.layer.shadowOpacity = 0.2
+        TabbarView.layer.shadowRadius = 24 / UIScreen.main.scale
         
         detailView.isHidden = true
         
