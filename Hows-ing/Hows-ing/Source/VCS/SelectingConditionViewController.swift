@@ -36,6 +36,25 @@ class SelectingConditionViewController: UIViewController {
         setDropdown()
         setSubmitBtn()
 
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationItem.title = "AI 청약 추천"
+        self.navigationController?.navigationItem.title = ""
+        self.navigationController?.navigationBar.barStyle = .default
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+        
+        let backButtonAppearance = UIBarButtonItemAppearance()
+           // backButton하단에 표출되는 text를 안보이게 설정
+        backButtonAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.clear, .font: UIFont.systemFont(ofSize: 0.0)]
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .white
+        appearance.shadowColor = .clear
+        appearance.backButtonAppearance = backButtonAppearance
+        self.navigationController?.navigationBar.standardAppearance = appearance
+        self.navigationController?.navigationBar.compactAppearance = appearance
+        self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        
         setAgeBtnDefault();setIdentityBtnDefault();setFamilyBtnDefault()
         
         ageBtn_10.tag = 10; ageBtn_20.tag = 20; ageBtn_30.tag = 30; ageBtn_40.tag = 40
@@ -50,6 +69,13 @@ class SelectingConditionViewController: UIViewController {
         submitBtn.layer.cornerRadius = 12
         
     }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        super.viewWillAppear(animated)
+//        self.navigationController?.navigationBar.isHidden = false
+//        self.navigationController?.navigationBar.topItem?.title = "AI 청약 추천"
+//
+//    }
     
     @IBOutlet weak var ageBtn_10: UIButton!
     @IBOutlet weak var ageBtn_20: UIButton!

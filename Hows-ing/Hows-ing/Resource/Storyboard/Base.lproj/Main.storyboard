@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LGc-Ka-m5I">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LGc-Ka-m5I">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -190,12 +189,24 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCW-oB-s3b">
+                                                        <rect key="frame" x="0.0" y="0.0" width="155.33333333333334" height="155.66666666666666"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="SubscriptionRecommendation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8WB-rI-lki"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" name="ButtonBlue2"/>
                                                 <constraints>
                                                     <constraint firstItem="syv-7N-0aY" firstAttribute="top" secondItem="0UB-0C-Ddj" secondAttribute="top" constant="17" id="4pD-YA-UjY"/>
                                                     <constraint firstAttribute="width" secondItem="0UB-0C-Ddj" secondAttribute="height" multiplier="1:1" id="Caq-Ta-pI6"/>
+                                                    <constraint firstItem="DCW-oB-s3b" firstAttribute="leading" secondItem="0UB-0C-Ddj" secondAttribute="leading" id="E7L-jW-kpF"/>
+                                                    <constraint firstAttribute="bottom" secondItem="DCW-oB-s3b" secondAttribute="bottom" id="Q3R-DJ-Zdf"/>
+                                                    <constraint firstItem="DCW-oB-s3b" firstAttribute="top" secondItem="0UB-0C-Ddj" secondAttribute="top" id="UoE-uP-tbM"/>
                                                     <constraint firstAttribute="bottom" secondItem="egG-A9-pfk" secondAttribute="bottom" constant="27" id="Wte-02-g1o"/>
+                                                    <constraint firstAttribute="trailing" secondItem="DCW-oB-s3b" secondAttribute="trailing" id="dnA-17-Hcf"/>
                                                     <constraint firstItem="syv-7N-0aY" firstAttribute="leading" secondItem="0UB-0C-Ddj" secondAttribute="leading" constant="20" id="hJx-6c-y5M"/>
                                                     <constraint firstAttribute="trailing" secondItem="egG-A9-pfk" secondAttribute="trailing" constant="19" id="xMZ-Hv-iyO"/>
                                                 </constraints>
@@ -740,7 +751,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

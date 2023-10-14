@@ -114,6 +114,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let vc = sb.instantiateViewController(withIdentifier: "SubscriptionInfo")
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @IBAction func SubscriptionRecommendation(_ sender: Any) {
+        let sb = UIStoryboard(name: "Subscription", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "SelectingConditionViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return bannerData.count
     }
