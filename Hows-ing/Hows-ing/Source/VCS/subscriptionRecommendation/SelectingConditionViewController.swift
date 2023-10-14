@@ -10,9 +10,9 @@ import DropDown
 
 class SelectingConditionViewController: UIViewController {
     
-    var age: Int = 0
+    var age: String = ""
     var identity: String = ""
-    var familyNumber: Int = 0
+    var familyNumber: String = ""
     var havingNoHousePeriod: String = ""
     var joinAccountPeriod: String = ""
     var moneyAmmount: String = ""
@@ -120,13 +120,13 @@ class SelectingConditionViewController: UIViewController {
 
         switch sender.tag {
         case 10:
-            age = 10
+            age = "10대"
         case 20:
-            age = 20
+            age = "20대"
         case 30:
-            age = 30
+            age = "30대"
         case 40:
-            age = 40
+            age = "40대 이상"
         default:
             break
         }
@@ -159,21 +159,21 @@ class SelectingConditionViewController: UIViewController {
 
         switch sender.tag {
         case 0:
-            familyNumber = 0
+            familyNumber = "0명"
         case 1:
-            familyNumber = 1
+            familyNumber = "1명"
         case 2:
-            familyNumber = 2
+            familyNumber = "2명"
         case 3:
-            familyNumber = 3
+            familyNumber = "3명"
         case 4:
-            familyNumber = 4
+            familyNumber = "4명"
         case 5:
-            familyNumber = 5
+            familyNumber = "5명"
         case 6:
-            familyNumber = 6
+            familyNumber = "6명 이상"
         default:
-            familyNumber = 0
+            familyNumber = "0명"
             break
         }
     }
@@ -234,7 +234,7 @@ class SelectingConditionViewController: UIViewController {
         
         DropDown.appearance().textColor = UIColor(named: "8Fgrey") ?? .gray // 아이템 텍스트 색상
         DropDown.appearance().textFont = UIFont(name: "Pretendard-Medium", size: 15)!
-        DropDown.appearance().selectedTextColor = UIColor(named: "Blue") ?? .blue // 선택된 아이템 텍스트 색상
+        DropDown.appearance().selectedTextColor = UIColor(named: "HousingBlue") ?? .blue // 선택된 아이템 텍스트 색상
         DropDown.appearance().backgroundColor = UIColor.white // 아이템 팝업 배경 색상
         DropDown.appearance().selectionBackgroundColor = UIColor.white // 선택한 아이템 배경 색상
         DropDown.appearance().setupCornerRadius(8)
@@ -315,7 +315,7 @@ class SelectingConditionViewController: UIViewController {
     }
     
     func setSubmitBtn(){
-        if(age != 0 && identity != "" && familyNumber != 0 && havingNoHousePeriod != "" && joinAccountPeriod != "" && moneyAmmount != ""){
+        if(age != "" && identity != "" && familyNumber != "" && havingNoHousePeriod != "" && joinAccountPeriod != "" && moneyAmmount != ""){
             submitBtn.layer.backgroundColor = UIColor(red: 0.247, green: 0.51, blue: 0.969, alpha: 1).cgColor
             submitBtn.setTitleColor(.white, for: .normal)
             submitBtn.isEnabled = true
@@ -326,5 +326,37 @@ class SelectingConditionViewController: UIViewController {
 
         }
     }
+    
+    @IBAction func submitBtnDidTap(_ sender: Any) {
+        let sb = UIStoryboard(name: "Subscription", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "SelectingLocalConditionVC") as! SelectingLocalConditionVC
+        vc.subscriptionInfo = SubscriptionCondition(adr_do: "", recruit_date: monthAgoDate(), age: age, position: identity, family: familyNumber, no_house_period: havingNoHousePeriod, account_period: joinAccountPeriod, account_money: moneyAmmount, house_around: "")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 
+    func monthAgoDate() -> String{
+        // 현재 날짜 가져오기
+        let currentDate = Date()
+
+        // Calendar 인스턴스 생성
+        let calendar = Calendar.current
+
+        // 한 달 전의 DateComponents 생성
+        var oneMonthAgoComponents = DateComponents()
+        oneMonthAgoComponents.month = -1
+
+        // 현재 날짜에서 한 달 전의 날짜 계산
+        if let oneMonthAgoDate = calendar.date(byAdding: oneMonthAgoComponents, to: currentDate) {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd" // 날짜 형식을 원하는 형식으로 변경
+            let oneMonthAgoDateString = dateFormatter.string(from: oneMonthAgoDate)
+            print("한 달 전 날짜: \(oneMonthAgoDateString)")
+            return oneMonthAgoDateString
+
+        } else {
+            print("날짜 계산 실패")
+            return ""
+        }
+    }
+    
 }

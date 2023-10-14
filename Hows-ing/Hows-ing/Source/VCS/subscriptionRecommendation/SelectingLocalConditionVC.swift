@@ -10,8 +10,9 @@ import DropDown
 
 class SelectingLocalConditionVC: UIViewController {
     
-    var city: String = "서울특별시"
+    var city: String = "서울"
     var squareFeet:String = "~85제곱미터"
+    var subscriptionInfo: SubscriptionCondition = SubscriptionCondition(adr_do: "", recruit_date: "", age: "", position: "", family: "", no_house_period: "", account_period: "", account_money: "", house_around: "")
     
     var selectedCity: Int = 0
     // DropDown 객체 생성
@@ -28,6 +29,7 @@ class SelectingLocalConditionVC: UIViewController {
         
         initUI()
         setDropdown()
+        submitBtn.layer.cornerRadius = 12
     }
     
     @IBOutlet weak var cityDropView: UIView!
@@ -35,13 +37,15 @@ class SelectingLocalConditionVC: UIViewController {
     
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var squareFeetLabel: UILabel!
-    
+    @IBOutlet weak var submitBtn: UIButton!
         
     @IBOutlet weak var cityDropBtn: UIButton!
     @IBOutlet weak var squareFeetDropBtn: UIButton!
     
     @IBAction func submitBtnDidTap(_ sender: Any) {
-
+        subscriptionInfo.adr_do = city
+        subscriptionInfo.house_around = squareFeet
+        print(subscriptionInfo)
         let newViewController = self.storyboard!.instantiateViewController(identifier: "LoadingViewController")
         newViewController.modalPresentationStyle = UIModalPresentationStyle.fullScreen
         self.present(newViewController, animated: false)
@@ -59,14 +63,14 @@ class SelectingLocalConditionVC: UIViewController {
         
         DropDown.appearance().textColor = UIColor(named: "8Fgrey") ?? .gray // 아이템 텍스트 색상
         DropDown.appearance().textFont = UIFont(name: "Pretendard-Medium", size: 15)!
-        DropDown.appearance().selectedTextColor = UIColor(named: "Blue") ?? .blue // 선택된 아이템 텍스트 색상
+        DropDown.appearance().selectedTextColor = UIColor(red: 0.247, green: 0.51, blue: 0.969, alpha: 1)
         DropDown.appearance().backgroundColor = UIColor.white // 아이템 팝업 배경 색상
         DropDown.appearance().selectionBackgroundColor = UIColor.white // 선택한 아이템 배경 색상
         DropDown.appearance().setupCornerRadius(8)
         
         cityDropdown.dismissMode = .automatic // 팝업을 닫을 모드 설정
         squareFeetDropdown.dismissMode = .automatic
-                    
+        
     }
 
     
