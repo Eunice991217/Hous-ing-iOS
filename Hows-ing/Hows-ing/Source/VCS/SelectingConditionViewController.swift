@@ -40,12 +40,12 @@ class SelectingConditionViewController: UIViewController {
         
         ageBtn_10.tag = 10; ageBtn_20.tag = 20; ageBtn_30.tag = 30; ageBtn_40.tag = 40
         identityBtn_student.tag = 1; identityBtn_worker.tag = 2; identityBtn_newMarriage.tag = 3; identityBtn_marriage.tag = 4; identityBtn_basicLiving.tag = 5
-        familyNumber_1.tag = 1; familyNumber_2.tag = 2; familyNumber_3.tag = 3; familyNumber_4.tag = 4
+        familyNumber_0.tag = 0; familyNumber_1.tag = 1; familyNumber_2.tag = 2; familyNumber_3.tag = 3
         ageBtn_10.addTarget(self, action: #selector(ageBtnClicked(_:)), for: .touchUpInside);ageBtn_20.addTarget(self, action: #selector(ageBtnClicked(_:)), for: .touchUpInside);ageBtn_30.addTarget(self, action: #selector(ageBtnClicked(_:)), for: .touchUpInside);ageBtn_40.addTarget(self, action: #selector(ageBtnClicked(_:)), for: .touchUpInside)
         
         identityBtn_student.addTarget(self, action: #selector(identityBtnClicked(_:)), for: .touchUpInside);identityBtn_worker.addTarget(self, action: #selector(identityBtnClicked(_:)), for: .touchUpInside);identityBtn_newMarriage.addTarget(self, action: #selector(identityBtnClicked(_:)), for: .touchUpInside);identityBtn_marriage.addTarget(self, action: #selector(identityBtnClicked(_:)), for: .touchUpInside);identityBtn_basicLiving.addTarget(self, action: #selector(identityBtnClicked(_:)), for: .touchUpInside)
         
-        familyNumber_1.addTarget(self, action: #selector(familyNumberBtnClicked(_:)), for: .touchUpInside);familyNumber_2.addTarget(self, action: #selector(familyNumberBtnClicked(_:)), for: .touchUpInside);familyNumber_3.addTarget(self, action: #selector(familyNumberBtnClicked(_:)), for: .touchUpInside);familyNumber_4.addTarget(self, action: #selector(familyNumberBtnClicked(_:)), for: .touchUpInside)
+        familyNumber_0.addTarget(self, action: #selector(familyNumberBtnClicked(_:)), for: .touchUpInside);familyNumber_1.addTarget(self, action: #selector(familyNumberBtnClicked(_:)), for: .touchUpInside);familyNumber_2.addTarget(self, action: #selector(familyNumberBtnClicked(_:)), for: .touchUpInside);familyNumber_3.addTarget(self, action: #selector(familyNumberBtnClicked(_:)), for: .touchUpInside);familyNumber_4.addTarget(self, action: #selector(familyNumberBtnClicked(_:)), for: .touchUpInside);familyNumber_5.addTarget(self, action: #selector(familyNumberBtnClicked(_:)), for: .touchUpInside);familyNumber_6.addTarget(self, action: #selector(familyNumberBtnClicked(_:)), for: .touchUpInside)
         
         submitBtn.layer.cornerRadius = 12
         
@@ -62,11 +62,14 @@ class SelectingConditionViewController: UIViewController {
     @IBOutlet weak var identityBtn_marriage: UIButton!
     @IBOutlet weak var identityBtn_basicLiving: UIButton!
     
+    @IBOutlet weak var familyNumber_0: UIButton!
     @IBOutlet weak var familyNumber_1: UIButton!
     @IBOutlet weak var familyNumber_2: UIButton!
     @IBOutlet weak var familyNumber_3: UIButton!
     @IBOutlet weak var familyNumber_4: UIButton!
-    
+    @IBOutlet weak var familyNumber_5: UIButton!
+    @IBOutlet weak var familyNumber_6: UIButton!
+
     
     @IBOutlet weak var noHouseDropView: UIView!
     @IBOutlet weak var noHousePeriodLabel: UILabel!
@@ -129,6 +132,8 @@ class SelectingConditionViewController: UIViewController {
         setSubmitBtn()
 
         switch sender.tag {
+        case 0:
+            familyNumber = 0
         case 1:
             familyNumber = 1
         case 2:
@@ -137,6 +142,10 @@ class SelectingConditionViewController: UIViewController {
             familyNumber = 3
         case 4:
             familyNumber = 4
+        case 5:
+            familyNumber = 5
+        case 6:
+            familyNumber = 6
         default:
             familyNumber = 0
             break
@@ -166,10 +175,13 @@ class SelectingConditionViewController: UIViewController {
         setBtnDefaultBorder(identityBtn_basicLiving)
     }
     func setFamilyBtnDefault(){
+        setBtnDefaultBorder(familyNumber_0)
         setBtnDefaultBorder(familyNumber_1)
         setBtnDefaultBorder(familyNumber_2)
         setBtnDefaultBorder(familyNumber_3)
         setBtnDefaultBorder(familyNumber_4)
+        setBtnDefaultBorder(familyNumber_5)
+        setBtnDefaultBorder(familyNumber_6)
     }
     
     func setBtnDefaultBorder(_ button: UIButton){
