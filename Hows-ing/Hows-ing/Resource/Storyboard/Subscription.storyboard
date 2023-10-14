@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4LH-Oh-c2T">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -717,7 +717,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JyJ-do-M5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3148" y="-63"/>
+            <point key="canvasLocation" x="3325" y="-63"/>
         </scene>
         <!--Subscription Result View Controller-->
         <scene sceneID="bEx-L8-10s">
@@ -747,17 +747,18 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tI9-Gy-x4J">
                                 <rect key="frame" x="30" y="716" width="330" height="54"/>
+                                <color key="backgroundColor" name="ButtonBlue2"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="y7l-kd-Ogk"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="확인">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="Blue"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="확인">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmBtnDidTap:" destination="4LH-Oh-c2T" eventType="touchUpInside" id="biw-L7-qa5"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마포 더 클래시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKl-Kv-gVT">
                                 <rect key="frame" x="60" y="192" width="270" height="24"/>
@@ -765,14 +766,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울 마포구 아현동 ‘마포 더 클래시' " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9j-fN-ygd">
-                                <rect key="frame" x="60" y="226" width="270" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9j-fN-ygd">
+                                <rect key="frame" x="60" y="236" width="270" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="추가정보..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcY-ia-wLo">
-                                <rect key="frame" x="60" y="252" width="270" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcY-ia-wLo">
+                                <rect key="frame" x="60" y="246" width="270" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -819,14 +820,38 @@
                                     <constraint firstAttribute="height" constant="44" id="zSI-tT-Otn"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bf-p8-GzP">
+                                <rect key="frame" x="320" y="316" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="HxS-Oi-03s"/>
+                                    <constraint firstAttribute="height" constant="20" id="w4a-SI-gUV"/>
+                                </constraints>
+                                <color key="tintColor" name="Shadow1"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="next"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="nextBtnDidTap:" destination="4LH-Oh-c2T" eventType="touchUpInside" id="SsC-YP-by6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StK-TS-qB3">
+                                <rect key="frame" x="60" y="226" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Pretendard-SemiBold" family="Pretendard" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cWC-iT-4V0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="U9j-fN-ygd" firstAttribute="trailing" secondItem="oTO-nk-G3q" secondAttribute="trailing" constant="-45" id="4qS-Hk-2cy"/>
+                            <constraint firstItem="2bf-p8-GzP" firstAttribute="bottom" secondItem="oTO-nk-G3q" secondAttribute="bottom" constant="-30" id="5TV-Vv-9Oa"/>
                             <constraint firstItem="U9j-fN-ygd" firstAttribute="leading" secondItem="oTO-nk-G3q" secondAttribute="leading" constant="45" id="73f-9U-s2R"/>
+                            <constraint firstItem="U9j-fN-ygd" firstAttribute="top" secondItem="StK-TS-qB3" secondAttribute="bottom" constant="10" id="AJn-SF-tLS"/>
                             <constraint firstItem="oTO-nk-G3q" firstAttribute="leading" secondItem="cWC-iT-4V0" secondAttribute="leading" constant="15" id="Bjr-et-Wvt"/>
                             <constraint firstItem="NKl-Kv-gVT" firstAttribute="leading" secondItem="oTO-nk-G3q" secondAttribute="leading" constant="45" id="CyG-ZY-myX"/>
+                            <constraint firstItem="cWC-iT-4V0" firstAttribute="trailing" secondItem="2bf-p8-GzP" secondAttribute="trailing" constant="50" id="DPV-sT-IbB"/>
                             <constraint firstItem="oTO-nk-G3q" firstAttribute="top" secondItem="yJw-aC-Re3" secondAttribute="bottom" constant="55" id="Drj-oc-Ivd"/>
                             <constraint firstItem="YSE-Ry-i56" firstAttribute="leading" secondItem="cWC-iT-4V0" secondAttribute="leading" constant="36" id="EEh-tf-V1d"/>
                             <constraint firstItem="tI9-Gy-x4J" firstAttribute="leading" secondItem="cWC-iT-4V0" secondAttribute="leading" constant="30" id="GaS-Hr-eC7"/>
@@ -835,12 +860,13 @@
                             <constraint firstItem="jcY-ia-wLo" firstAttribute="leading" secondItem="oTO-nk-G3q" secondAttribute="leading" constant="45" id="HRH-dT-R5p"/>
                             <constraint firstItem="NKl-Kv-gVT" firstAttribute="trailing" secondItem="oTO-nk-G3q" secondAttribute="trailing" constant="-45" id="Sei-3y-nZq"/>
                             <constraint firstItem="NKl-Kv-gVT" firstAttribute="top" secondItem="oTO-nk-G3q" secondAttribute="top" constant="20" id="UMd-nT-ZTg"/>
+                            <constraint firstItem="StK-TS-qB3" firstAttribute="leading" secondItem="oTO-nk-G3q" secondAttribute="leading" constant="45" id="UzX-cO-HxM"/>
                             <constraint firstItem="lyM-ME-JNy" firstAttribute="top" secondItem="YSE-Ry-i56" secondAttribute="bottom" constant="24" id="VhY-Uo-g3z"/>
                             <constraint firstItem="YSE-Ry-i56" firstAttribute="top" secondItem="oTO-nk-G3q" secondAttribute="bottom" constant="41" id="VjV-qd-e8y"/>
                             <constraint firstItem="yJw-aC-Re3" firstAttribute="leading" secondItem="7Ha-3i-s4H" secondAttribute="leading" constant="25" id="ZrU-Yj-H8P"/>
                             <constraint firstItem="cWC-iT-4V0" firstAttribute="trailing" secondItem="oTO-nk-G3q" secondAttribute="trailing" constant="15" id="bSK-vL-4gZ"/>
+                            <constraint firstItem="StK-TS-qB3" firstAttribute="top" secondItem="NKl-Kv-gVT" secondAttribute="bottom" constant="10" id="dnk-Sj-J0N"/>
                             <constraint firstItem="yJw-aC-Re3" firstAttribute="top" secondItem="cWC-iT-4V0" secondAttribute="top" constant="40" id="gkp-ag-k96"/>
-                            <constraint firstItem="U9j-fN-ygd" firstAttribute="top" secondItem="NKl-Kv-gVT" secondAttribute="bottom" constant="10" id="lFU-pJ-nyF"/>
                             <constraint firstItem="cWC-iT-4V0" firstAttribute="bottom" secondItem="tI9-Gy-x4J" secondAttribute="bottom" constant="40" id="ly6-Fm-Ase"/>
                             <constraint firstItem="cWC-iT-4V0" firstAttribute="trailing" secondItem="lyM-ME-JNy" secondAttribute="trailing" constant="36" id="siZ-8V-H70"/>
                             <constraint firstItem="cWC-iT-4V0" firstAttribute="trailing" secondItem="tI9-Gy-x4J" secondAttribute="trailing" constant="30" id="yYt-g4-jX8"/>
@@ -848,9 +874,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="confirmBtn" destination="tI9-Gy-x4J" id="uQH-Sh-716"/>
                         <outlet property="highLabel" destination="SsW-Wb-7CV" id="QxC-E5-GLs"/>
+                        <outlet property="infoLabel" destination="StK-TS-qB3" id="ONu-HH-UQ0"/>
+                        <outlet property="locationLabel" destination="U9j-fN-ygd" id="lrj-9o-Y8f"/>
+                        <outlet property="nameLabel" destination="NKl-Kv-gVT" id="O5t-sJ-jLF"/>
                         <outlet property="normalLabel" destination="EYR-Ng-Xx2" id="gwH-Ji-llb"/>
                         <outlet property="resultView" destination="lyM-ME-JNy" id="dMv-h7-H3p"/>
+                        <outlet property="totalSupplyLabel" destination="jcY-ia-wLo" id="HUe-0d-3cX"/>
                         <outlet property="veryHighLabel" destination="Yk9-li-rWt" id="g9A-9T-1JN"/>
                     </connections>
                 </viewController>
@@ -863,10 +894,14 @@
         <image name="BlueLogo" width="63" height="65"/>
         <image name="BlueRectangle" width="377" height="242"/>
         <image name="down" width="24" height="24"/>
+        <image name="next" width="20" height="20"/>
         <namedColor name="8Fgrey">
             <color red="0.5607843137254902" green="0.5607843137254902" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Blue">
+            <color red="0.24705882352941178" green="0.50980392156862742" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ButtonBlue2">
             <color red="0.24705882352941178" green="0.50980392156862742" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="CobaltBlue">
@@ -877,6 +912,9 @@
         </namedColor>
         <namedColor name="HousingBlue">
             <color red="0.24705882352941178" green="0.50980392156862742" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Shadow1">
+            <color red="0.32156862745098042" green="0.32156862745098042" blue="0.32156862745098042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="disabledBtnColor">
             <color red="0.60392156862745094" green="0.60392156862745094" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

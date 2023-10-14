@@ -46,9 +46,14 @@ class SelectingLocalConditionVC: UIViewController {
         subscriptionInfo.adr_do = city
         subscriptionInfo.house_around = squareFeet
         print(subscriptionInfo)
-        let newViewController = self.storyboard!.instantiateViewController(identifier: "LoadingViewController")
+        subscriptionInfo.adr_do = city
+        subscriptionInfo.house_around = squareFeet
+        
+        let newViewController = self.storyboard!.instantiateViewController(identifier: "SubscriptionResultViewController") as! SubscriptionResultViewController
+        newViewController.subscriptionInfo = subscriptionInfo
         newViewController.modalPresentationStyle = UIModalPresentationStyle.fullScreen
         self.present(newViewController, animated: false)
+        
     }
     
     func initUI() {

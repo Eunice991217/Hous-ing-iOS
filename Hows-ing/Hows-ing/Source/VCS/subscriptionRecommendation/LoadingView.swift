@@ -10,6 +10,10 @@ import UIKit
 import UIKit
 
 class LoadingView: UIView {
+    let loadingView: UIView = {
+        let view = UIView()
+        return view
+    }()
     let topLabel: UILabel = {
         let label = UILabel()
         label.text = "AI 가"
@@ -101,5 +105,11 @@ class LoadingView: UIView {
         imageView.widthAnchor.constraint(equalToConstant: 63).isActive = true // 이미지 뷰의 너비 설정
         imageView.heightAnchor.constraint(equalToConstant: 65).isActive = true // 이미지 뷰의 높이 설정
     }
+
+    func fadeOut(duration: TimeInterval = 1.0) {
+        UIView.animate(withDuration: duration, animations: {
+            self.alpha = 0.0
+        })
+      }
 }
 

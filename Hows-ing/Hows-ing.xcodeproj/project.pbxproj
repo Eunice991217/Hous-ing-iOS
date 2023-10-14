@@ -12,11 +12,11 @@
 		32803E442AD2F72F00BD99BD /* SelectingConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32803E432AD2F72F00BD99BD /* SelectingConditionViewController.swift */; };
 		32803E482AD2FFCA00BD99BD /* DropDown in Frameworks */ = {isa = PBXBuildFile; productRef = 32803E472AD2FFCA00BD99BD /* DropDown */; };
 		32803E4A2AD3DB1400BD99BD /* SelectingLocalConditionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32803E492AD3DB1400BD99BD /* SelectingLocalConditionVC.swift */; };
-		32803E4C2AD3ED8300BD99BD /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32803E4B2AD3ED8300BD99BD /* LoadingViewController.swift */; };
 		32803E4E2AD3EE8300BD99BD /* SubscriptionResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32803E4D2AD3EE8300BD99BD /* SubscriptionResultViewController.swift */; };
 		32950C982AD2BBF6007D5A4B /* Subscription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32950C972AD2BBF6007D5A4B /* Subscription.storyboard */; };
 		32D0819D2ADA6DEE00F68002 /* subscriptionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D0819C2ADA6DEE00F68002 /* subscriptionAPI.swift */; };
 		32D081A02ADA6F2500F68002 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 32D0819F2ADA6F2500F68002 /* Alamofire */; };
+		32D081A22ADA923400F68002 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D081A12ADA923400F68002 /* LoadingView.swift */; };
 		4865E8F22AD2BA6C00BAB81A /* mapDetailCont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4865E8F12AD2BA6C00BAB81A /* mapDetailCont.swift */; };
 		48876C742AD2816C007EDAF5 /* realEstate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48876C732AD2816C007EDAF5 /* realEstate.storyboard */; };
 		48876C782AD28CE9007EDAF5 /* mapCont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48876C772AD28CE9007EDAF5 /* mapCont.swift */; };
@@ -48,10 +48,10 @@
 		32803E412AD2F35200BD99BD /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		32803E432AD2F72F00BD99BD /* SelectingConditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectingConditionViewController.swift; sourceTree = "<group>"; };
 		32803E492AD3DB1400BD99BD /* SelectingLocalConditionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectingLocalConditionVC.swift; sourceTree = "<group>"; };
-		32803E4B2AD3ED8300BD99BD /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		32803E4D2AD3EE8300BD99BD /* SubscriptionResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionResultViewController.swift; sourceTree = "<group>"; };
 		32950C972AD2BBF6007D5A4B /* Subscription.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Subscription.storyboard; sourceTree = "<group>"; };
 		32D0819C2ADA6DEE00F68002 /* subscriptionAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subscriptionAPI.swift; sourceTree = "<group>"; };
+		32D081A12ADA923400F68002 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		41CB422A137929E06455FA28 /* Pods-Hows-ing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hows-ing.debug.xcconfig"; path = "Target Support Files/Pods-Hows-ing/Pods-Hows-ing.debug.xcconfig"; sourceTree = "<group>"; };
 		4865E8F12AD2BA6C00BAB81A /* mapDetailCont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapDetailCont.swift; sourceTree = "<group>"; };
 		48876C732AD2816C007EDAF5 /* realEstate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = realEstate.storyboard; sourceTree = "<group>"; };
@@ -116,10 +116,11 @@
 		32D0819B2ADA6DC600F68002 /* subscriptionRecommendation */ = {
 			isa = PBXGroup;
 			children = (
+				32803E4D2AD3EE8300BD99BD /* SubscriptionResultViewController.swift */,
 				32803E492AD3DB1400BD99BD /* SelectingLocalConditionVC.swift */,
-				32803E4B2AD3ED8300BD99BD /* LoadingViewController.swift */,
 				32803E432AD2F72F00BD99BD /* SelectingConditionViewController.swift */,
 				32D0819C2ADA6DEE00F68002 /* subscriptionAPI.swift */,
+				32D081A12ADA923400F68002 /* LoadingView.swift */,
 			);
 			path = subscriptionRecommendation;
 			sourceTree = "<group>";
@@ -200,7 +201,6 @@
 				32D0819B2ADA6DC600F68002 /* subscriptionRecommendation */,
 				48876C762AD28CCB007EDAF5 /* realEstate */,
 				8BAA99172AD1551A00EF4746 /* ViewController.swift */,
-				32803E4D2AD3EE8300BD99BD /* SubscriptionResultViewController.swift */,
 				8BBC8EDC2AD4F78D00D52F93 /* SubscriptionInfoViewController.swift */,
 			);
 			path = VCS;
@@ -366,10 +366,10 @@
 				8BAA99182AD1551A00EF4746 /* ViewController.swift in Sources */,
 				32803E4E2AD3EE8300BD99BD /* SubscriptionResultViewController.swift in Sources */,
 				32803E4A2AD3DB1400BD99BD /* SelectingLocalConditionVC.swift in Sources */,
-				32803E4C2AD3ED8300BD99BD /* LoadingViewController.swift in Sources */,
 				8BAA99142AD1551A00EF4746 /* AppDelegate.swift in Sources */,
 				48876C782AD28CE9007EDAF5 /* mapCont.swift in Sources */,
 				8B0FFA892AD5637200CCC5AC /* SubscriptionInfoTableViewCell.swift in Sources */,
+				32D081A22ADA923400F68002 /* LoadingView.swift in Sources */,
 				8BDFD2192AD298730028A43E /* BannerCollectionViewCell.swift in Sources */,
 				8BBC8EDD2AD4F78D00D52F93 /* SubscriptionInfoViewController.swift in Sources */,
 				8BAA99162AD1551A00EF4746 /* SceneDelegate.swift in Sources */,
