@@ -18,6 +18,10 @@
 		4865E8F22AD2BA6C00BAB81A /* mapDetailCont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4865E8F12AD2BA6C00BAB81A /* mapDetailCont.swift */; };
 		48876C742AD2816C007EDAF5 /* realEstate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48876C732AD2816C007EDAF5 /* realEstate.storyboard */; };
 		48876C782AD28CE9007EDAF5 /* mapCont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48876C772AD28CE9007EDAF5 /* mapCont.swift */; };
+		48D878142ADA70BC00BD2A6A /* mapDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D878132ADA70BC00BD2A6A /* mapDataModel.swift */; };
+		48D878172ADA8BE900BD2A6A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 48D878162ADA8BE900BD2A6A /* Kingfisher */; };
+		48EE54A62AD9A0480049CD7E /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 48EE54A52AD9A0480049CD7E /* DGCharts */; };
+		48EE54A82AD9A0480049CD7E /* DGChartsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 48EE54A72AD9A0480049CD7E /* DGChartsDynamic */; };
 		8B0FFA892AD5637200CCC5AC /* SubscriptionInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0FFA882AD5637200CCC5AC /* SubscriptionInfoTableViewCell.swift */; };
 		8B2ADE852AD25ADC00213F84 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2ADE7C2AD25ADC00213F84 /* Pretendard-Regular.otf */; };
 		8B2ADE862AD25ADC00213F84 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2ADE7D2AD25ADC00213F84 /* Pretendard-Thin.otf */; };
@@ -55,6 +59,7 @@
 		48876C732AD2816C007EDAF5 /* realEstate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = realEstate.storyboard; sourceTree = "<group>"; };
 		48876C772AD28CE9007EDAF5 /* mapCont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapCont.swift; sourceTree = "<group>"; };
 		48876C792AD29792007EDAF5 /* Hows-ing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hows-ing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48D878132ADA70BC00BD2A6A /* mapDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapDataModel.swift; sourceTree = "<group>"; };
 		863A63D3137CBAD58DE2859B /* Pods-Hows-ing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hows-ing.release.xcconfig"; path = "Target Support Files/Pods-Hows-ing/Pods-Hows-ing.release.xcconfig"; sourceTree = "<group>"; };
 		8B0FFA882AD5637200CCC5AC /* SubscriptionInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionInfoTableViewCell.swift; sourceTree = "<group>"; };
 		8B2ADE7C2AD25ADC00213F84 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
@@ -86,8 +91,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48EE54A82AD9A0480049CD7E /* DGChartsDynamic in Frameworks */,
 				32803E482AD2FFCA00BD99BD /* DropDown in Frameworks */,
+				48EE54A62AD9A0480049CD7E /* DGCharts in Frameworks */,
 				9BCDC22D51311EC636561360 /* Pods_Hows_ing.framework in Frameworks */,
+				48D878172ADA8BE900BD2A6A /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +124,7 @@
 			children = (
 				48876C772AD28CE9007EDAF5 /* mapCont.swift */,
 				4865E8F12AD2BA6C00BAB81A /* mapDetailCont.swift */,
+				48D878132ADA70BC00BD2A6A /* mapDataModel.swift */,
 			);
 			path = realEstate;
 			sourceTree = "<group>";
@@ -236,6 +245,9 @@
 			name = "Hows-ing";
 			packageProductDependencies = (
 				32803E472AD2FFCA00BD99BD /* DropDown */,
+				48EE54A52AD9A0480049CD7E /* DGCharts */,
+				48EE54A72AD9A0480049CD7E /* DGChartsDynamic */,
+				48D878162ADA8BE900BD2A6A /* Kingfisher */,
 			);
 			productName = "Hows-ing";
 			productReference = 48876C792AD29792007EDAF5 /* Hows-ing.app */;
@@ -267,6 +279,8 @@
 			mainGroup = 8BAA99072AD1551A00EF4746;
 			packageReferences = (
 				32803E462AD2FFCA00BD99BD /* XCRemoteSwiftPackageReference "DropDown" */,
+				48EE54A42AD9A0470049CD7E /* XCRemoteSwiftPackageReference "Charts" */,
+				48D878152ADA8BE900BD2A6A /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			projectDirPath = "";
 			projectRoot = "";
@@ -355,6 +369,7 @@
 				32803E4A2AD3DB1400BD99BD /* SelectingLocalConditionVC.swift in Sources */,
 				32803E4C2AD3ED8300BD99BD /* LoadingViewController.swift in Sources */,
 				8BAA99142AD1551A00EF4746 /* AppDelegate.swift in Sources */,
+				48D878142ADA70BC00BD2A6A /* mapDataModel.swift in Sources */,
 				48876C782AD28CE9007EDAF5 /* mapCont.swift in Sources */,
 				8B0FFA892AD5637200CCC5AC /* SubscriptionInfoTableViewCell.swift in Sources */,
 				8BEA5FAF2AD7C1B2007231DE /* SelectLocationViewController.swift in Sources */,
@@ -606,6 +621,22 @@
 				kind = branch;
 			};
 		};
+		48D878152ADA8BE900BD2A6A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.9.1;
+			};
+		};
+		48EE54A42AD9A0470049CD7E /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -613,6 +644,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 32803E462AD2FFCA00BD99BD /* XCRemoteSwiftPackageReference "DropDown" */;
 			productName = DropDown;
+		};
+		48D878162ADA8BE900BD2A6A /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48D878152ADA8BE900BD2A6A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		48EE54A52AD9A0480049CD7E /* DGCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48EE54A42AD9A0470049CD7E /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGCharts;
+		};
+		48EE54A72AD9A0480049CD7E /* DGChartsDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48EE54A42AD9A0470049CD7E /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGChartsDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
