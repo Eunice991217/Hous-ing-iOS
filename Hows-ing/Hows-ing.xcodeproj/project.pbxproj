@@ -42,6 +42,7 @@
 		8BBC8EDD2AD4F78D00D52F93 /* SubscriptionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBC8EDC2AD4F78D00D52F93 /* SubscriptionInfoViewController.swift */; };
 		8BDFD2172AD283F70028A43E /* neurimboGothic-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8BDFD2162AD283F70028A43E /* neurimboGothic-Regular.otf */; };
 		8BDFD2192AD298730028A43E /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDFD2182AD298730028A43E /* BannerCollectionViewCell.swift */; };
+		8BEA5FAF2AD7C1B2007231DE /* SelectLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA5FAE2AD7C1B2007231DE /* SelectLocationViewController.swift */; };
 		9BCDC22D51311EC636561360 /* Pods_Hows_ing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D242B8B2653EACFC0B4962 /* Pods_Hows_ing.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		8BBC8EDC2AD4F78D00D52F93 /* SubscriptionInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionInfoViewController.swift; sourceTree = "<group>"; };
 		8BDFD2162AD283F70028A43E /* neurimboGothic-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "neurimboGothic-Regular.otf"; sourceTree = "<group>"; };
 		8BDFD2182AD298730028A43E /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		8BEA5FAE2AD7C1B2007231DE /* SelectLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLocationViewController.swift; sourceTree = "<group>"; };
 		F9D242B8B2653EACFC0B4962 /* Pods_Hows_ing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hows_ing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -198,6 +200,7 @@
 				32803E4B2AD3ED8300BD99BD /* LoadingViewController.swift */,
 				32803E4D2AD3EE8300BD99BD /* SubscriptionResultViewController.swift */,
 				8BBC8EDC2AD4F78D00D52F93 /* SubscriptionInfoViewController.swift */,
+				8BEA5FAE2AD7C1B2007231DE /* SelectLocationViewController.swift */,
 			);
 			path = VCS;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				48D878142ADA70BC00BD2A6A /* mapDataModel.swift in Sources */,
 				48876C782AD28CE9007EDAF5 /* mapCont.swift in Sources */,
 				8B0FFA892AD5637200CCC5AC /* SubscriptionInfoTableViewCell.swift in Sources */,
+				8BEA5FAF2AD7C1B2007231DE /* SelectLocationViewController.swift in Sources */,
 				8BDFD2192AD298730028A43E /* BannerCollectionViewCell.swift in Sources */,
 				8BBC8EDD2AD4F78D00D52F93 /* SubscriptionInfoViewController.swift in Sources */,
 				8BAA99162AD1551A00EF4746 /* SceneDelegate.swift in Sources */,
