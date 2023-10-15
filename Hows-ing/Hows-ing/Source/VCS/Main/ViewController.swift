@@ -23,7 +23,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     let pageLock = NSLock()
     var bannerData:[BannerData] = []
     var tapNum: Int = 0
-    var MapView: UIView = UIView()
+    var MapView: UIView?
     var Map: mapCont?
     
     override func viewDidLoad() {
@@ -82,7 +82,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func makeDummyData(){
         bannerData.append(BannerData(title: "AI, 주택청약 당첨 확률 알려줘! 👀", bgColor: "BannerYellow"))
-        bannerData.append(BannerData(title: "미래 집값, 예측할 수 있다고? 🏠", bgColor: "BannerOrange"))
+        bannerData.append(BannerData(title: "궁금했던 집값 한눈에 비교하기 🏠", bgColor: "BannerOrange"))
     }
     
     @IBAction func PaperButtonTap(_ sender: Any) {
@@ -97,7 +97,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         HomeText.textColor = UIColor(named: "HousingGray")
         tapNum = 0
         
-        MapView.removeFromSuperview()
+        MapView?.removeFromSuperview()
+        MapView = nil
         Map = nil
     }
     
@@ -118,16 +119,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         Map = UIStoryboard(name: "realEstate", bundle: Bundle.main).instantiateInitialViewController() as? mapCont
         MapView = Map?.view ?? UIView()
+        Map?.superView = self
         
-        MapView.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(MapView)
+        MapView?.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(MapView!)
         
         let safeArea = view.safeAreaLayoutGuide
         NSLayoutConstraint.activate([
-            MapView.topAnchor.constraint(equalTo: safeArea.topAnchor),
-            MapView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
-            MapView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor),
-            MapView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor)
+            MapView!.topAnchor.constraint(equalTo: safeArea.topAnchor),
+            MapView!.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
+            MapView!.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor),
+            MapView!.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor)
         ])
         
     }

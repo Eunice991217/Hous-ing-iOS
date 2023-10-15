@@ -36,6 +36,8 @@ class mapCont: UIViewController, CLLocationManagerDelegate{
     
     var isToggled = false
     
+    var superView: UIViewController?
+    
     // 노고산동 아이비타워 오피스텔
     @IBOutlet weak var houseName: UILabel!
     
@@ -71,7 +73,7 @@ class mapCont: UIViewController, CLLocationManagerDelegate{
             mapDetailCont.divCode = mapDivCode ?? "sale"
 //            mapDetailCont.IdentiNum = mapIdentiNum
 
-            self.present(mapDetailCont, animated: true)
+            superView?.present(mapDetailCont, animated: true)
         }
     }
     
@@ -332,7 +334,7 @@ class mapCont: UIViewController, CLLocationManagerDelegate{
             mapDetailCont.divCode = mapDivCode ?? "sale"
 //            mapDetailCont.IdentiNum = mapIdentiNum
 
-            self.present(mapDetailCont, animated: true)
+            superView?.present(mapDetailCont, animated: true)
         }
     }
     

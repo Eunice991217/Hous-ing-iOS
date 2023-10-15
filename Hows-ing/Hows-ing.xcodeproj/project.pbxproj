@@ -211,11 +211,27 @@
 			children = (
 				32D0819B2ADA6DC600F68002 /* subscriptionRecommendation */,
 				48876C762AD28CCB007EDAF5 /* realEstate */,
-				8BAA99172AD1551A00EF4746 /* ViewController.swift */,
-				8BBC8EDC2AD4F78D00D52F93 /* SubscriptionInfoViewController.swift */,
-				8BEA5FAE2AD7C1B2007231DE /* SelectLocationViewController.swift */,
+				8B519B822ADB85FF00399C5B /* Main */,
+				8B519B852ADB863F00399C5B /* SubscriptionbyLocation */,
 			);
 			path = VCS;
+			sourceTree = "<group>";
+		};
+		8B519B822ADB85FF00399C5B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8BAA99172AD1551A00EF4746 /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8B519B852ADB863F00399C5B /* SubscriptionbyLocation */ = {
+			isa = PBXGroup;
+			children = (
+				8BEA5FAE2AD7C1B2007231DE /* SelectLocationViewController.swift */,
+				8BBC8EDC2AD4F78D00D52F93 /* SubscriptionInfoViewController.swift */,
+			);
+			path = SubscriptionbyLocation;
 			sourceTree = "<group>";
 		};
 		8BAA99072AD1551A00EF4746 = {

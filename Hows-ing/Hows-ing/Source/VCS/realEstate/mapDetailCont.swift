@@ -61,7 +61,7 @@ class mapDetailCont: UIViewController {
     
     // 뒤로가기 버튼 클릭했을 때
     @IBAction func backDidTap(_ sender: Any) {
-        self.presentingViewController?.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     // 매매가 view
