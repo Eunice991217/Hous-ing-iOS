@@ -22,7 +22,6 @@
 		8B0FFA892AD5637200CCC5AC /* SubscriptionInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0FFA882AD5637200CCC5AC /* SubscriptionInfoTableViewCell.swift */; };
 		8B17611B2ADB7FE500F08B3E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8B17611A2ADB7FE500F08B3E /* Alamofire */; };
 		8B17611D2ADB7FEF00F08B3E /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 8B17611C2ADB7FEF00F08B3E /* DGCharts */; };
-		8B17611F2ADB7FEF00F08B3E /* DGChartsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 8B17611E2ADB7FEF00F08B3E /* DGChartsDynamic */; };
 		8B1761212ADB7FF700F08B3E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8B1761202ADB7FF700F08B3E /* Kingfisher */; };
 		8B1761252ADB809300F08B3E /* DropDown in Frameworks */ = {isa = PBXBuildFile; productRef = 8B1761242ADB809300F08B3E /* DropDown */; };
 		8B2ADE852AD25ADC00213F84 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2ADE7C2AD25ADC00213F84 /* Pretendard-Regular.otf */; };
@@ -94,7 +93,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B17611F2ADB7FEF00F08B3E /* DGChartsDynamic in Frameworks */,
 				8B1761252ADB809300F08B3E /* DropDown in Frameworks */,
 				8BC061D72ADB7CD6002010AE /* Pods_Hows_ing.framework in Frameworks */,
 				8B17611D2ADB7FEF00F08B3E /* DGCharts in Frameworks */,
@@ -275,7 +273,6 @@
 			packageProductDependencies = (
 				8B17611A2ADB7FE500F08B3E /* Alamofire */,
 				8B17611C2ADB7FEF00F08B3E /* DGCharts */,
-				8B17611E2ADB7FEF00F08B3E /* DGChartsDynamic */,
 				8B1761202ADB7FF700F08B3E /* Kingfisher */,
 				8B1761242ADB809300F08B3E /* DropDown */,
 			);
@@ -700,11 +697,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 48EE54A42AD9A0470049CD7E /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = DGCharts;
-		};
-		8B17611E2ADB7FEF00F08B3E /* DGChartsDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 48EE54A42AD9A0470049CD7E /* XCRemoteSwiftPackageReference "Charts" */;
-			productName = DGChartsDynamic;
 		};
 		8B1761202ADB7FF700F08B3E /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
