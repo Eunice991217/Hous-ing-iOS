@@ -49,7 +49,7 @@ class SubscriptionInfoViewController: UIViewController, UITableViewDelegate, UIT
     }
     
     func dataUpdate(){
-        var queryURL = "https://api.odcloud.kr/api/ApplyhomeInfoDetailSvc/v1/getAPTLttotPblancDetail?page=" + String(page) + "&perPage=10&returnType=JSON&serviceKey=" + GetKey(key: "locationKey")
+        var queryURL = "https://api.odcloud.kr/api/ApplyhomeInfoDetailSvc/v1/getAPTLttotPblancDetail?page=" + String(page) + "&perPage=10&returnType=JSON&serviceKey=" + GetKey()
         if ind != -1{
             queryURL += "&cond%5BSUBSCRPT_AREA_CODE_NM%3A%3AEQ%5D=" + locationName[ind].addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         }
@@ -143,11 +143,8 @@ class SubscriptionInfoViewController: UIViewController, UITableViewDelegate, UIT
     }
 }
 
-func GetKey(key: String)->String{
-    guard let ret = Bundle.main.object(forInfoDictionaryKey: key) as? String else{
-        return ""
-    }
-    return ret
+func GetKey()->String{
+    return "MXaOLldc%2FcMikgWupHZWPyG4%2FECMwzEmocS7g7ueaD5WVp4OaLu1ez8o0KaB4jayNdPppHfoPFuPgt%2B8qUjIuA%3D%3D"
 }
 
 struct sspair{
