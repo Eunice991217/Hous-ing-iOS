@@ -23,8 +23,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     let pageLock = NSLock()
     var bannerData:[BannerData] = []
     var tapNum: Int = 0
-    var MapView: UIView = UIView()
-    var Map: mapCont?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,9 +94,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         PaperText.textColor = UIColor(named: "HousingBlue")
         HomeText.textColor = UIColor(named: "HousingGray")
         tapNum = 0
-        
-        MapView.removeFromSuperview()
-        Map = nil
     }
     
     @IBAction func HomeButtonTap(_ sender: Any) {
@@ -106,28 +101,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             return
         }
         self.pageLock.lock()
-        defer {
-            self.view.bringSubviewToFront(TabbarView)
-            self.pageLock.unlock() }
+        defer { self.pageLock.unlock() }
         PaperIcon.image = UIImage(named: "PaperIcon")
         HomeIcon.image = UIImage(named: "HomeSelect")
         PaperText.textColor = UIColor(named: "HousingGray")
         HomeText.textColor = UIColor(named: "HousingBlue")
         tapNum = 1
-        
-        Map = UIStoryboard(name: "realEstate", bundle: Bundle.main).instantiateInitialViewController() as? mapCont
-        MapView = Map?.view ?? UIView()
-        
-        MapView.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(MapView)
-        
-        let safeArea = view.safeAreaLayoutGuide
-        NSLayoutConstraint.activate([
-            MapView.topAnchor.constraint(equalTo: safeArea.topAnchor),
-            MapView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
-            MapView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor),
-            MapView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor)
-        ])
     }
     
     @IBAction func SubscriptionByLocation(_ sender: Any) {
@@ -136,12 +115,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @IBAction func SubscriptionByAI(_ sender: Any) {
+    @IBAction func SubscriptionRecommendation(_ sender: Any) {
         let sb = UIStoryboard(name: "Subscription", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "SelectingCondition")
+        let vc = sb.instantiateViewController(withIdentifier: "SelectingConditionViewController")
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return bannerData.count

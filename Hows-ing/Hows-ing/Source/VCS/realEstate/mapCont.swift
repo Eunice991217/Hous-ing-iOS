@@ -210,6 +210,11 @@ class mapCont: UIViewController, CLLocationManagerDelegate{
                 } else {
                     return "\(formatter.string(from: NSNumber(value: price)) ?? "")"
                 }
+                
+            } else {
+                new_marker.iconImage = NMFOverlayImage(name: "markerIcon")
+                // 이미 뷰가 표시 중이면 숨김
+                self.infoView?.removeFromSuperview()
             }
             
             DispatchQueue.main.async {

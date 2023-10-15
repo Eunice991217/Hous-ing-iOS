@@ -10,9 +10,9 @@ import DropDown
 
 class SelectingConditionViewController: UIViewController {
     
-    var age: Int = 0
+    var age: String = ""
     var identity: String = ""
-    var familyNumber: Int = 0
+    var familyNumber: String = ""
     var havingNoHousePeriod: String = ""
     var joinAccountPeriod: String = ""
     var moneyAmmount: String = ""
@@ -36,20 +36,46 @@ class SelectingConditionViewController: UIViewController {
         setDropdown()
         setSubmitBtn()
 
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationItem.title = "AI 청약 추천"
+        self.navigationController?.navigationItem.title = ""
+        self.navigationController?.navigationBar.barStyle = .default
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+        
+        let backButtonAppearance = UIBarButtonItemAppearance()
+           // backButton하단에 표출되는 text를 안보이게 설정
+        backButtonAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.clear, .font: UIFont.systemFont(ofSize: 0.0)]
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .white
+        appearance.shadowColor = .clear
+        appearance.backButtonAppearance = backButtonAppearance
+        self.navigationController?.navigationBar.standardAppearance = appearance
+        self.navigationController?.navigationBar.compactAppearance = appearance
+        self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        
         setAgeBtnDefault();setIdentityBtnDefault();setFamilyBtnDefault()
         
         ageBtn_10.tag = 10; ageBtn_20.tag = 20; ageBtn_30.tag = 30; ageBtn_40.tag = 40
         identityBtn_student.tag = 1; identityBtn_worker.tag = 2; identityBtn_newMarriage.tag = 3; identityBtn_marriage.tag = 4; identityBtn_basicLiving.tag = 5
-        familyNumber_1.tag = 1; familyNumber_2.tag = 2; familyNumber_3.tag = 3; familyNumber_4.tag = 4
+        familyNumber_0.tag = 0; familyNumber_1.tag = 1; familyNumber_2.tag = 2; familyNumber_3.tag = 3
         ageBtn_10.addTarget(self, action: #selector(ageBtnClicked(_:)), for: .touchUpInside);ageBtn_20.addTarget(self, action: #selector(ageBtnClicked(_:)), for: .touchUpInside);ageBtn_30.addTarget(self, action: #selector(ageBtnClicked(_:)), for: .touchUpInside);ageBtn_40.addTarget(self, action: #selector(ageBtnClicked(_:)), for: .touchUpInside)
         
         identityBtn_student.addTarget(self, action: #selector(identityBtnClicked(_:)), for: .touchUpInside);identityBtn_worker.addTarget(self, action: #selector(identityBtnClicked(_:)), for: .touchUpInside);identityBtn_newMarriage.addTarget(self, action: #selector(identityBtnClicked(_:)), for: .touchUpInside);identityBtn_marriage.addTarget(self, action: #selector(identityBtnClicked(_:)), for: .touchUpInside);identityBtn_basicLiving.addTarget(self, action: #selector(identityBtnClicked(_:)), for: .touchUpInside)
         
-        familyNumber_1.addTarget(self, action: #selector(familyNumberBtnClicked(_:)), for: .touchUpInside);familyNumber_2.addTarget(self, action: #selector(familyNumberBtnClicked(_:)), for: .touchUpInside);familyNumber_3.addTarget(self, action: #selector(familyNumberBtnClicked(_:)), for: .touchUpInside);familyNumber_4.addTarget(self, action: #selector(familyNumberBtnClicked(_:)), for: .touchUpInside)
+        familyNumber_0.addTarget(self, action: #selector(familyNumberBtnClicked(_:)), for: .touchUpInside);familyNumber_1.addTarget(self, action: #selector(familyNumberBtnClicked(_:)), for: .touchUpInside);familyNumber_2.addTarget(self, action: #selector(familyNumberBtnClicked(_:)), for: .touchUpInside);familyNumber_3.addTarget(self, action: #selector(familyNumberBtnClicked(_:)), for: .touchUpInside);familyNumber_4.addTarget(self, action: #selector(familyNumberBtnClicked(_:)), for: .touchUpInside);familyNumber_5.addTarget(self, action: #selector(familyNumberBtnClicked(_:)), for: .touchUpInside);familyNumber_6.addTarget(self, action: #selector(familyNumberBtnClicked(_:)), for: .touchUpInside)
         
         submitBtn.layer.cornerRadius = 12
         
     }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        super.viewWillAppear(animated)
+//        self.navigationController?.navigationBar.isHidden = false
+//        self.navigationController?.navigationBar.topItem?.title = "AI 청약 추천"
+//
+//    }
     
     @IBOutlet weak var ageBtn_10: UIButton!
     @IBOutlet weak var ageBtn_20: UIButton!
@@ -62,11 +88,14 @@ class SelectingConditionViewController: UIViewController {
     @IBOutlet weak var identityBtn_marriage: UIButton!
     @IBOutlet weak var identityBtn_basicLiving: UIButton!
     
+    @IBOutlet weak var familyNumber_0: UIButton!
     @IBOutlet weak var familyNumber_1: UIButton!
     @IBOutlet weak var familyNumber_2: UIButton!
     @IBOutlet weak var familyNumber_3: UIButton!
     @IBOutlet weak var familyNumber_4: UIButton!
-    
+    @IBOutlet weak var familyNumber_5: UIButton!
+    @IBOutlet weak var familyNumber_6: UIButton!
+
     
     @IBOutlet weak var noHouseDropView: UIView!
     @IBOutlet weak var noHousePeriodLabel: UILabel!
@@ -91,13 +120,13 @@ class SelectingConditionViewController: UIViewController {
 
         switch sender.tag {
         case 10:
-            age = 10
+            age = "10대"
         case 20:
-            age = 20
+            age = "20대"
         case 30:
-            age = 30
+            age = "30대"
         case 40:
-            age = 40
+            age = "40대 이상"
         default:
             break
         }
@@ -129,16 +158,22 @@ class SelectingConditionViewController: UIViewController {
         setSubmitBtn()
 
         switch sender.tag {
+        case 0:
+            familyNumber = "0명"
         case 1:
-            familyNumber = 1
+            familyNumber = "1명"
         case 2:
-            familyNumber = 2
+            familyNumber = "2명"
         case 3:
-            familyNumber = 3
+            familyNumber = "3명"
         case 4:
-            familyNumber = 4
+            familyNumber = "4명"
+        case 5:
+            familyNumber = "5명"
+        case 6:
+            familyNumber = "6명 이상"
         default:
-            familyNumber = 0
+            familyNumber = "0명"
             break
         }
     }
@@ -166,10 +201,13 @@ class SelectingConditionViewController: UIViewController {
         setBtnDefaultBorder(identityBtn_basicLiving)
     }
     func setFamilyBtnDefault(){
+        setBtnDefaultBorder(familyNumber_0)
         setBtnDefaultBorder(familyNumber_1)
         setBtnDefaultBorder(familyNumber_2)
         setBtnDefaultBorder(familyNumber_3)
         setBtnDefaultBorder(familyNumber_4)
+        setBtnDefaultBorder(familyNumber_5)
+        setBtnDefaultBorder(familyNumber_6)
     }
     
     func setBtnDefaultBorder(_ button: UIButton){
@@ -196,7 +234,7 @@ class SelectingConditionViewController: UIViewController {
         
         DropDown.appearance().textColor = UIColor(named: "8Fgrey") ?? .gray // 아이템 텍스트 색상
         DropDown.appearance().textFont = UIFont(name: "Pretendard-Medium", size: 15)!
-        DropDown.appearance().selectedTextColor = UIColor(named: "Blue") ?? .blue // 선택된 아이템 텍스트 색상
+        DropDown.appearance().selectedTextColor = UIColor(named: "HousingBlue") ?? .blue // 선택된 아이템 텍스트 색상
         DropDown.appearance().backgroundColor = UIColor.white // 아이템 팝업 배경 색상
         DropDown.appearance().selectionBackgroundColor = UIColor.white // 선택한 아이템 배경 색상
         DropDown.appearance().setupCornerRadius(8)
@@ -277,7 +315,7 @@ class SelectingConditionViewController: UIViewController {
     }
     
     func setSubmitBtn(){
-        if(age != 0 && identity != "" && familyNumber != 0 && havingNoHousePeriod != "" && joinAccountPeriod != "" && moneyAmmount != ""){
+        if(age != "" && identity != "" && familyNumber != "" && havingNoHousePeriod != "" && joinAccountPeriod != "" && moneyAmmount != ""){
             submitBtn.layer.backgroundColor = UIColor(red: 0.247, green: 0.51, blue: 0.969, alpha: 1).cgColor
             submitBtn.setTitleColor(.white, for: .normal)
             submitBtn.isEnabled = true
@@ -288,5 +326,37 @@ class SelectingConditionViewController: UIViewController {
 
         }
     }
+    
+    @IBAction func submitBtnDidTap(_ sender: Any) {
+        let sb = UIStoryboard(name: "Subscription", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "SelectingLocalConditionVC") as! SelectingLocalConditionVC
+        vc.subscriptionInfo = SubscriptionCondition(adr_do: "", recruit_date: monthAgoDate(), age: age, position: identity, family: familyNumber, no_house_period: havingNoHousePeriod, account_period: joinAccountPeriod, account_money: moneyAmmount, house_around: "")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 
+    func monthAgoDate() -> String{
+        // 현재 날짜 가져오기
+        let currentDate = Date()
+
+        // Calendar 인스턴스 생성
+        let calendar = Calendar.current
+
+        // 한 달 전의 DateComponents 생성
+        var oneMonthAgoComponents = DateComponents()
+        oneMonthAgoComponents.month = -1
+
+        // 현재 날짜에서 한 달 전의 날짜 계산
+        if let oneMonthAgoDate = calendar.date(byAdding: oneMonthAgoComponents, to: currentDate) {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd" // 날짜 형식을 원하는 형식으로 변경
+            let oneMonthAgoDateString = dateFormatter.string(from: oneMonthAgoDate)
+            print("한 달 전 날짜: \(oneMonthAgoDateString)")
+            return oneMonthAgoDateString
+
+        } else {
+            print("날짜 계산 실패")
+            return ""
+        }
+    }
+    
 }
