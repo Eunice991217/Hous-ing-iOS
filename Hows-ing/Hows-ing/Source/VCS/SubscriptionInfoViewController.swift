@@ -145,7 +145,7 @@ class SubscriptionInfoViewController: UIViewController, UITableViewDelegate, UIT
 
 func GetKey(key: String)->String{
     guard let ret = Bundle.main.object(forInfoDictionaryKey: key) as? String else{
-        return "MXaOLldc%2FcMikgWupHZWPyG4%2FECMwzEmocS7g7ueaD5WVp4OaLu1ez8o0KaB4jayNdPppHfoPFuPgt%2B8qUjIuA%3D%3D"
+        return ""
     }
     return ret
 }
