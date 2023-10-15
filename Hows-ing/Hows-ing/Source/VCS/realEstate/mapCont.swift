@@ -23,7 +23,7 @@ class mapCont: UIViewController, CLLocationManagerDelegate{
     var tapNum: Int = 1
     
     var mapDivCode: String?
-    var mapIdentiNum: IdentiNum? 
+    var mapIdentiNum: IdentiNum?
     
     var locationManager = CLLocationManager()
     
@@ -210,11 +210,6 @@ class mapCont: UIViewController, CLLocationManagerDelegate{
                 } else {
                     return "\(formatter.string(from: NSNumber(value: price)) ?? "")"
                 }
-                
-            } else {
-                new_marker.iconImage = NMFOverlayImage(name: "markerIcon")
-                // 이미 뷰가 표시 중이면 숨김
-                self.infoView?.removeFromSuperview()
             }
             
             DispatchQueue.main.async {
@@ -391,7 +386,7 @@ class mapCont: UIViewController, CLLocationManagerDelegate{
 class MapServerAPI {
     let apiUrlString = "https://2715928430.for-seoul.synctreengine.com/map"
     
-    init(completion: @escaping ([Result]) -> Void) {
+    init(completion: @escaping ([mapResult]) -> Void) {
         if let apiUrl = URL(string: apiUrlString) {
             URLSession.shared.dataTask(with: apiUrl) { (data, response, error) in
                 if let error = error {
@@ -405,7 +400,7 @@ class MapServerAPI {
                         let results = mapGet.result
                         
                         // 새로운 결과를 담을 배열 초기화
-                        var newResults = [Result]()
+                        var newResults = [mapResult]()
                         for result in results {
                             newResults.append(result)
                         }
@@ -421,4 +416,3 @@ class MapServerAPI {
         }
     }
 }
-

@@ -10,21 +10,21 @@
 		3267CA152AD2EBAE0087A671 /* SelectingConditionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267CA142AD2EBAE0087A671 /* SelectingConditionView.swift */; };
 		32803E422AD2F35200BD99BD /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32803E412AD2F35200BD99BD /* FontManager.swift */; };
 		32803E442AD2F72F00BD99BD /* SelectingConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32803E432AD2F72F00BD99BD /* SelectingConditionViewController.swift */; };
-		32803E482AD2FFCA00BD99BD /* DropDown in Frameworks */ = {isa = PBXBuildFile; productRef = 32803E472AD2FFCA00BD99BD /* DropDown */; };
 		32803E4A2AD3DB1400BD99BD /* SelectingLocalConditionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32803E492AD3DB1400BD99BD /* SelectingLocalConditionVC.swift */; };
 		32803E4E2AD3EE8300BD99BD /* SubscriptionResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32803E4D2AD3EE8300BD99BD /* SubscriptionResultViewController.swift */; };
 		32950C982AD2BBF6007D5A4B /* Subscription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32950C972AD2BBF6007D5A4B /* Subscription.storyboard */; };
 		32D0819D2ADA6DEE00F68002 /* subscriptionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D0819C2ADA6DEE00F68002 /* subscriptionAPI.swift */; };
-		32D081A02ADA6F2500F68002 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 32D0819F2ADA6F2500F68002 /* Alamofire */; };
 		32D081A22ADA923400F68002 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D081A12ADA923400F68002 /* LoadingView.swift */; };
 		4865E8F22AD2BA6C00BAB81A /* mapDetailCont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4865E8F12AD2BA6C00BAB81A /* mapDetailCont.swift */; };
 		48876C742AD2816C007EDAF5 /* realEstate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48876C732AD2816C007EDAF5 /* realEstate.storyboard */; };
 		48876C782AD28CE9007EDAF5 /* mapCont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48876C772AD28CE9007EDAF5 /* mapCont.swift */; };
 		48D878142ADA70BC00BD2A6A /* mapDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D878132ADA70BC00BD2A6A /* mapDataModel.swift */; };
-		48D878172ADA8BE900BD2A6A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 48D878162ADA8BE900BD2A6A /* Kingfisher */; };
-		48EE54A62AD9A0480049CD7E /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 48EE54A52AD9A0480049CD7E /* DGCharts */; };
-		48EE54A82AD9A0480049CD7E /* DGChartsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 48EE54A72AD9A0480049CD7E /* DGChartsDynamic */; };
 		8B0FFA892AD5637200CCC5AC /* SubscriptionInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0FFA882AD5637200CCC5AC /* SubscriptionInfoTableViewCell.swift */; };
+		8B17611B2ADB7FE500F08B3E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8B17611A2ADB7FE500F08B3E /* Alamofire */; };
+		8B17611D2ADB7FEF00F08B3E /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 8B17611C2ADB7FEF00F08B3E /* DGCharts */; };
+		8B17611F2ADB7FEF00F08B3E /* DGChartsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 8B17611E2ADB7FEF00F08B3E /* DGChartsDynamic */; };
+		8B1761212ADB7FF700F08B3E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8B1761202ADB7FF700F08B3E /* Kingfisher */; };
+		8B1761252ADB809300F08B3E /* DropDown in Frameworks */ = {isa = PBXBuildFile; productRef = 8B1761242ADB809300F08B3E /* DropDown */; };
 		8B2ADE852AD25ADC00213F84 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2ADE7C2AD25ADC00213F84 /* Pretendard-Regular.otf */; };
 		8B2ADE862AD25ADC00213F84 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2ADE7D2AD25ADC00213F84 /* Pretendard-Thin.otf */; };
 		8B2ADE872AD25ADC00213F84 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2ADE7E2AD25ADC00213F84 /* Pretendard-Black.otf */; };
@@ -94,12 +94,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B17611F2ADB7FEF00F08B3E /* DGChartsDynamic in Frameworks */,
+				8B1761252ADB809300F08B3E /* DropDown in Frameworks */,
 				8BC061D72ADB7CD6002010AE /* Pods_Hows_ing.framework in Frameworks */,
-				32D081A02ADA6F2500F68002 /* Alamofire in Frameworks */,
-				48EE54A82AD9A0480049CD7E /* DGChartsDynamic in Frameworks */,
-				32803E482AD2FFCA00BD99BD /* DropDown in Frameworks */,
-				48EE54A62AD9A0480049CD7E /* DGCharts in Frameworks */,
-				48D878172ADA8BE900BD2A6A /* Kingfisher in Frameworks */,
+				8B17611D2ADB7FEF00F08B3E /* DGCharts in Frameworks */,
+				8B17611B2ADB7FE500F08B3E /* Alamofire in Frameworks */,
+				8B1761212ADB7FF700F08B3E /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,11 +257,11 @@
 			);
 			name = "Hows-ing";
 			packageProductDependencies = (
-				32803E472AD2FFCA00BD99BD /* DropDown */,
-				32D0819F2ADA6F2500F68002 /* Alamofire */,
-				48EE54A52AD9A0480049CD7E /* DGCharts */,
-				48EE54A72AD9A0480049CD7E /* DGChartsDynamic */,
-				48D878162ADA8BE900BD2A6A /* Kingfisher */,
+				8B17611A2ADB7FE500F08B3E /* Alamofire */,
+				8B17611C2ADB7FEF00F08B3E /* DGCharts */,
+				8B17611E2ADB7FEF00F08B3E /* DGChartsDynamic */,
+				8B1761202ADB7FF700F08B3E /* Kingfisher */,
+				8B1761242ADB809300F08B3E /* DropDown */,
 			);
 			productName = "Hows-ing";
 			productReference = 48876C792AD29792007EDAF5 /* Hows-ing.app */;
@@ -296,6 +296,7 @@
 				32D0819E2ADA6F2500F68002 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				48EE54A42AD9A0470049CD7E /* XCRemoteSwiftPackageReference "Charts" */,
 				48D878152ADA8BE900BD2A6A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				8B1761192ADB7FE500F08B3E /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			projectDirPath = "";
 			projectRoot = "";
@@ -657,33 +658,41 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		8B1761192ADB7FE500F08B3E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		32803E472AD2FFCA00BD99BD /* DropDown */ = {
+		8B17611A2ADB7FE500F08B3E /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 32803E462AD2FFCA00BD99BD /* XCRemoteSwiftPackageReference "DropDown" */;
-			productName = DropDown;
-		};
-		32D0819F2ADA6F2500F68002 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 32D0819E2ADA6F2500F68002 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 8B1761192ADB7FE500F08B3E /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		48D878162ADA8BE900BD2A6A /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 48D878152ADA8BE900BD2A6A /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
-		};
-		48EE54A52AD9A0480049CD7E /* DGCharts */ = {
+		8B17611C2ADB7FEF00F08B3E /* DGCharts */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 48EE54A42AD9A0470049CD7E /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = DGCharts;
 		};
-		48EE54A72AD9A0480049CD7E /* DGChartsDynamic */ = {
+		8B17611E2ADB7FEF00F08B3E /* DGChartsDynamic */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 48EE54A42AD9A0470049CD7E /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = DGChartsDynamic;
+		};
+		8B1761202ADB7FF700F08B3E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48D878152ADA8BE900BD2A6A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		8B1761242ADB809300F08B3E /* DropDown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 32803E462AD2FFCA00BD99BD /* XCRemoteSwiftPackageReference "DropDown" */;
+			productName = DropDown;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

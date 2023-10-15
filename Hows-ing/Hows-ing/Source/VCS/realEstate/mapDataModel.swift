@@ -10,11 +10,11 @@ import Foundation
 // 지도 조회
 // MARK: - MapGet
 struct MapGet: Codable {
-    let result: [Result]
+    let result: [mapResult]
 }
 
 // MARK: - Result
-struct Result: Codable {
+struct mapResult: Codable {
     let divCode: String // 구분 코드 (매몰 / 단지)
     let xCoord, yCoord: Double // 좌표
     let monthlyDeposit, monthlyPrice, jeonsePrice, salePrice: Int?
