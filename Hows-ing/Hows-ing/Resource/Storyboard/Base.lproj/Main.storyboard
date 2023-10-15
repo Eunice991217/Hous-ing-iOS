@@ -190,14 +190,26 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7G-db-th1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="155.33333333333334" height="155.66666666666666"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="SubscriptionByAI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c9x-7Y-69d"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" name="ButtonBlue2"/>
                                                 <constraints>
                                                     <constraint firstItem="syv-7N-0aY" firstAttribute="top" secondItem="0UB-0C-Ddj" secondAttribute="top" constant="17" id="4pD-YA-UjY"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Y7G-db-th1" secondAttribute="bottom" id="Bxp-Vk-Y6k"/>
                                                     <constraint firstAttribute="width" secondItem="0UB-0C-Ddj" secondAttribute="height" multiplier="1:1" id="Caq-Ta-pI6"/>
                                                     <constraint firstAttribute="bottom" secondItem="egG-A9-pfk" secondAttribute="bottom" constant="27" id="Wte-02-g1o"/>
+                                                    <constraint firstItem="Y7G-db-th1" firstAttribute="top" secondItem="0UB-0C-Ddj" secondAttribute="top" id="ftZ-dJ-eRW"/>
                                                     <constraint firstItem="syv-7N-0aY" firstAttribute="leading" secondItem="0UB-0C-Ddj" secondAttribute="leading" constant="20" id="hJx-6c-y5M"/>
+                                                    <constraint firstItem="Y7G-db-th1" firstAttribute="leading" secondItem="0UB-0C-Ddj" secondAttribute="leading" id="jj8-6w-Rvw"/>
                                                     <constraint firstAttribute="trailing" secondItem="egG-A9-pfk" secondAttribute="trailing" constant="19" id="xMZ-Hv-iyO"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Y7G-db-th1" secondAttribute="trailing" id="ydw-N4-d1k"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아직 가입 안 하셨나요? 💡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjE-dY-zFC">
@@ -740,7 +752,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
