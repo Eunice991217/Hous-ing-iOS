@@ -42,10 +42,10 @@
 		8BAA991D2AD1551B00EF4746 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BAA991C2AD1551B00EF4746 /* Assets.xcassets */; };
 		8BAA99202AD1551B00EF4746 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BAA991E2AD1551B00EF4746 /* LaunchScreen.storyboard */; };
 		8BBC8EDD2AD4F78D00D52F93 /* SubscriptionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBC8EDC2AD4F78D00D52F93 /* SubscriptionInfoViewController.swift */; };
+		8BC061D72ADB7CD6002010AE /* Pods_Hows_ing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D242B8B2653EACFC0B4962 /* Pods_Hows_ing.framework */; };
 		8BDFD2172AD283F70028A43E /* neurimboGothic-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8BDFD2162AD283F70028A43E /* neurimboGothic-Regular.otf */; };
 		8BDFD2192AD298730028A43E /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDFD2182AD298730028A43E /* BannerCollectionViewCell.swift */; };
 		8BEA5FAF2AD7C1B2007231DE /* SelectLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA5FAE2AD7C1B2007231DE /* SelectLocationViewController.swift */; };
-		9BCDC22D51311EC636561360 /* Pods_Hows_ing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D242B8B2653EACFC0B4962 /* Pods_Hows_ing.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,11 +94,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BC061D72ADB7CD6002010AE /* Pods_Hows_ing.framework in Frameworks */,
 				32D081A02ADA6F2500F68002 /* Alamofire in Frameworks */,
 				48EE54A82AD9A0480049CD7E /* DGChartsDynamic in Frameworks */,
 				32803E482AD2FFCA00BD99BD /* DropDown in Frameworks */,
 				48EE54A62AD9A0480049CD7E /* DGCharts in Frameworks */,
-				9BCDC22D51311EC636561360 /* Pods_Hows_ing.framework in Frameworks */,
 				48D878172ADA8BE900BD2A6A /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -640,6 +640,7 @@
 		32D0819E2ADA6F2500F68002 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
+		};
 		48D878152ADA8BE900BD2A6A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -668,6 +669,7 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 32D0819E2ADA6F2500F68002 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
 		48D878162ADA8BE900BD2A6A /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 48D878152ADA8BE900BD2A6A /* XCRemoteSwiftPackageReference "Kingfisher" */;
