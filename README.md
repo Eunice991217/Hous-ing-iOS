@@ -3,7 +3,6 @@
 
 ## 📷 Screenshot
 <p>
-<img width=“10” alt="랜딩" src="https://github.com/Eunice991217/Hous-ing-iOS/assets/101406317/e0a876a5-d046-4450-af2f-c243ffe18771">
 <img width="100" alt="청약" src="https://github.com/Eunice991217/Hous-ing-iOS/assets/101406317/b717ace5-9e46-4f76-99a5-f5e6e9ca218d">
 <img width="100" alt="청약 정보 알아보기" src="https://github.com/Eunice991217/Hous-ing-iOS/assets/101406317/c30d12f8-9394-472d-a7b2-699b7d08581d">
 <img width="100" alt="맞춤 청약 추천" src="https://github.com/Eunice991217/Hous-ing-iOS/assets/101406317/5cba28a0-4642-4f9d-bbc7-312e34cda8f0">
