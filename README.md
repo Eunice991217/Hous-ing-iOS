@@ -8,8 +8,8 @@
 <img width="100" alt="맞춤 청약 추천" src="https://github.com/Eunice991217/Hous-ing-iOS/assets/101406317/5cba28a0-4642-4f9d-bbc7-312e34cda8f0">
 <img width="100" alt="카드 수정" src="https://github.com/Eunice991217/Hous-ing-iOS/assets/101406317/f281d601-f5ca-4aa6-ab42-81d58ffdfc1c">
 <img width="100" alt="부동산 1 클릭" src="https://github.com/Eunice991217/Hous-ing-iOS/assets/101406317/0a0a257f-75f5-47c2-a3f4-c36979c7325a">
-<img width="105" alt="스크린샷 2023-10-25 오후 10 33 38" src="https://github.com/Eunice991217/Hous-ing-iOS/assets/101406317/64b5a790-bc37-4db1-a3df-4037207f0fc0">
-<img width="105" alt="스크린샷 2023-10-25 오후 10 33 59" src="https://github.com/Eunice991217/Hous-ing-iOS/assets/101406317/28328e25-4b59-45b3-b08c-93ed29241742">
+<img width="107" alt="스크린샷 2023-10-25 오후 10 33 38" src="https://github.com/Eunice991217/Hous-ing-iOS/assets/101406317/64b5a790-bc37-4db1-a3df-4037207f0fc0">
+<img width="107" alt="스크린샷 2023-10-25 오후 10 33 59" src="https://github.com/Eunice991217/Hous-ing-iOS/assets/101406317/28328e25-4b59-45b3-b08c-93ed29241742">
 </p>
 
 ## 브랜치 명명 규칙
